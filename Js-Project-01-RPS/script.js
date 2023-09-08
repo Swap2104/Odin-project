@@ -1,14 +1,39 @@
 
+
+//*Genrate computers choice 
 let computersChoice = Math.floor(Math.random() * 3)
-let usersChoice = window.prompt("Enter a number",);
+//*get users choice 
+let usersChoice = window.prompt("Enter rock , paper or scissor",);
 
-console.log(computersChoice)
-console.log(usersChoice)
+//* Display computers choice as string.
+switch (computersChoice) {
+    case 0:
+        console.log("Computer: rock")
+        break;
+    case 1: console.log("Computer: paper")
+        break;
+    case 2: console.log("Computer: scissors")
+        break;
+}
 
+//* Display users choice.
+console.log("User: "+usersChoice)
+
+//* Convert users choice to number.
+usersChoice = usersChoice.toLowerCase()
+if (usersChoice == "rock") {
+    usersChoice = 0
+} else if (usersChoice == "paper") {
+    usersChoice = 1
+} else {
+    usersChoice = 2
+}
+
+//* check for tie
 if (computersChoice == usersChoice) {
     console.log("Its a Tie");
 }
-else {
+else {//*
     if (computersChoice == 0 && usersChoice == 1) {
         console.log("User wins")
     } else if (computersChoice == 0 && usersChoice == 2) {
@@ -23,6 +48,7 @@ else {
         console.log("Computer Wins")
     }
 }
+
 
 
 
