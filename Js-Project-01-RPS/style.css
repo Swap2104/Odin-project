@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    /* border: .1px solid black; */
+}
+
+#head {
+    margin: 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+
+#output {
+    align-items: center;
+    padding: 3rem;
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+    height: 6rem;
+}
+
+#selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+ #options-btn-0, #options-btn-1 , #options-btn-2 {
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    font-size: 10rem;
+    margin: 1.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    width: 45%;
+    align-self: center;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 5px;
+    border-bottom: 0px;
+}
+
+.score {
+    align-items: center;
+    display: flex;
+}

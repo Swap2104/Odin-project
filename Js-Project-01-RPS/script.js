@@ -3,7 +3,7 @@
 //*Genrate computers choice 
 let computersChoice = Math.floor(Math.random() * 3)
 //*get users choice 
-let usersChoice = window.prompt("Enter rock , paper or scissor",);
+// let usersChoice = window.prompt("Enter rock , paper or scissor",);
 
 //* Display computers choice as string.
 switch (computersChoice) {
@@ -70,6 +70,10 @@ else {//*
     }
 }
 
-
+let button= document.getElementsByClassName('options')
+button.addEventListener('click', function (e) {
+    console.log(e.target)
+    console.log(e.type)
+})
 
 
