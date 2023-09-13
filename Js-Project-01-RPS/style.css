@@ -15,9 +15,10 @@ body{
     flex-direction: column;
 }
 
-div {
-    /* border: .1px solid black; */
-}
+/* div {
+    border: .1px solid black;
+} 
+*/
 
 #head {
     margin: 2rem;
