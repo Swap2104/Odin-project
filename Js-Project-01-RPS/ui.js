@@ -156,8 +156,3 @@ function computersChoice() {
     }
 }
 
-function scoreUpdate() {
-    resultComp.textContent = computerScore
-    resultuser.textContent = userScore
-
-}
