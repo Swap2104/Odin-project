@@ -29,6 +29,15 @@ div {
     flex-direction: row;
     display: flex;
     height: 6rem;
+    width: 75%;
+    margin: auto;
+}
+
+#user , #computer{
+    font-size: 10rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: transparent;
 }
 
 #selection {
@@ -36,11 +45,13 @@ div {
     align-items: center;
     justify-content: center;
     padding: 3rem;
+    margin-top: 75px;
 }
 
  #options-btn-0, #options-btn-1 , #options-btn-2 {
     flex-direction: row;
     height: fit-content;
+    
     width: fit-content;
     font-size: 10rem;
     margin: 1.5rem;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="script.js"></script> -->
+    <!-- <script type="text/javascript" src="script.js"></script> -->
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -12,12 +12,12 @@
 <body>
     <div id="root">
         <div id="head">
-            <h3 id="header">Rock, Paper, Scissor</h3>
+            <h3 id="header">Rock Paper Scissor</h3>
         </div>
         <div id="output">
-            <div id="user">user</div>
+            <div id="user">&nbsp;</div>
             <h2>VS</h2>
-            <div id="computer">computer</div>
+            <div id="computer">&nbsp;</div>
         </div>
         <div id="selection">
             <button id="options-btn-0">✊🏻</button>
@@ -27,12 +27,18 @@
             <div class="options">✋🏻</div>
             <div class="options">✌🏻</div> -->
         </div>
-        <script src="ui.js"></script>
         <div id="result">
-            <div class="score"><h3>Computer:</h3><p id="compW"></p></div>
-            <div class="score"><h3>User:</h3><p id="userW"></p></div>
+            <div class="score">
+                <h3>Computer:</h3>
+                <p id="compw">&nbsp;</p>
+            </div>
+            <div class="score">
+                <h3>User:</h3>
+                <p id="userw">&nbsp;</p>
+            </div>
         </div>
     </div>
+    <script src="ui.js"></script>
 </body>
 
 </html>
