@@ -3,7 +3,7 @@
  Rock paper Scissor game using javascript 
 
 ## Start of the game
-
+![Start of the game](https://github.com/Swapnilnaique/Odin-project/blob/rps-ui/Js-Project-01-RPS/ui-Page.png)
 
 
 ## What it does
