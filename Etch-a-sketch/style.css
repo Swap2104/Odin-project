@@ -15,23 +15,28 @@ body {
     height: 100vh;
 }
 
+#grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 #container {
-    width: 40%;
-    height: 40vh;
+    width: fit-content;
+    height: fit-content;
     display: grid;
     grid-template-columns: repeat(16, .5fr);
     grid-template-rows: repeat(16, .5fr);
     grid-row-gap: 0px;
     grid-column-gap: 0px;
-    /* border: .1px solid rgb(0, 0, 0); */
-    width: auto;
-    height: auto;
+    border: .1px solid rgb(0, 0, 0);
+    /* width: auto; */
+    /* height: auto; */
 }
 
-.gridBox{
-    /* background-color: #0fb3f5; */
-}
 
-.gridBox:hover{
-    background-color: black;
-}
+
+/* .gridBox:hover{
+    background-color: rgb(151, 23, 23);
+} */
