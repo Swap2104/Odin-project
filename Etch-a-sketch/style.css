@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-/* 
-div {
-    border: .1px solid rgb(157, 140, 140);
-} */
 
 #head {
     display: flex;
@@ -65,12 +61,6 @@ body {
     grid-row-gap: 0px;
     grid-column-gap: 0px;
     border: .1px solid rgb(0, 0, 0);
-    /* width: auto; */
-    /* height: auto; */
 }
 
 
-
-/* .gridBox:hover{
-    background-color: rgb(151, 23, 23);
-} */

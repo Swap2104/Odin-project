@@ -1,11 +1,9 @@
-let mouseColor='black'
+let mouseColor = 'black'
 let gridBox = document.getElementsByClassName('gridBox')
 console.log(gridBox.length)
 for (let i = 0; i < gridBox.length; i++) {
-    // gridBox[i].style.backgroundColor = "red";
     gridBox[i].addEventListener('mouseover', (e) => {
         gridBox[i].style.background = mouseColor;
-        // div.style.background = "red";
         console.log(e.target)
         console.log(e.type)
     })
@@ -20,17 +18,18 @@ clear.addEventListener('click', () => {
 })
 
 
-let eraser= document.getElementById('eraser')
-eraser.addEventListener('click', ()=>{
-    mouseColor="white"
+let eraser = document.getElementById('eraser')
+eraser.addEventListener('click', () => {
+    mouseColor = "white"
 })
 
-let normal= document.getElementById('normal')
-normal.addEventListener('click', ()=>{
-    mouseColor="black"
+let normal = document.getElementById('normal')
+normal.addEventListener('click', () => {
+    mouseColor = "black"
 })
 
-let colorPicker=document.getElementById('colorPicker')
-colorPicker.addEventListener('change', ()=>{
-    mouseColor=colorPicker.value
+let colorPicker = document.getElementById('colorPicker')
+colorPicker.addEventListener('change', () => {
+    mouseColor = colorPicker.value
 })
+
