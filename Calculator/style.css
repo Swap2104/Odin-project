@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#container {
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+#calculatorBody {
+
+    border: 2px solid rgb(0, 255, 64);
+    width: 23%;
+    height: 500px;
+}
+
+#display {
+    width: 100%;
+    height: 200px;
+    border: 2px solid rgb(0, 55, 255);
+}
+
+#control {
+    width: 100%;
+    height: 300px;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.btn{
+    margin: 5px;
+    width: 90px;
+    height: 50px;
+}
