@@ -7,6 +7,11 @@
 body {
     width: 100%;
     height: 100vh;
+    background-color: #F1F6F9;
+    background-image: url(blurry-gradient-haikei.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .root {
@@ -34,6 +39,8 @@ body {
     justify-content: center;
     border-radius: 5px;
     background-color: #212A3E;
+    box-shadow: 6px 2px 5px #212A3E
+
 }
 
 #display-outline {
@@ -43,7 +50,7 @@ body {
     margin: 2px;
     border-radius: 5px;
     background-color: #9BA4B5;
-    color: #F1F6F9;
+    color: #333333;
     /* text-align: right; */
     text-align: start;
     font-size: 30px;
