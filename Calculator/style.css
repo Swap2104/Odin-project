@@ -27,7 +27,7 @@ body {
 #calculatorBody {
     border: 1px solid rgb(0, 0, 0);
     width: 21%;
-    height: 500px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,30 +36,56 @@ body {
     background-color: #212A3E;
 }
 
-#display {
+#display-outline {
     width: 98%;
-    height: 200px;
-    border: 1px solid rgb(0, 0, 0);
+    height: 150px;
+    /* border: 1px solid rgb(0, 0, 0); */
     margin: 2px;
     border-radius: 5px;
     background-color: #9BA4B5;
     color: #F1F6F9;
+    /* text-align: right; */
+    text-align: start;
+    font-size: 30px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: end;
+    /* align-items: right; */
+}
+
+#display {
+    padding: 10px;
+    width: 100%;
+    /* border: 2px solid black; */
+    text-align: right;
 
 }
+
 
 #control {
     align-self: center;
     justify-self: center;
     width: 100%;
-    height: 300px;
+    height: fit-content;
     /* border: 2px solid rgb(255, 0, 0); */
 }
 
-.btn{
+.btn-style {
     margin: 5px;
     width: 93px;
     height: 50px;
     border: none;
     border-radius: 5px;
-    background-color: #F1F6F9;
+    color: #F1F6F9;
+    background-color: #212A3E;
+    /* background-color: #F1F6F9; */
+    -webkit-box-shadow: 0 0 10px hsl(252, 20%, 10%);
+    box-shadow: 0 0 10px hsl(252, 20%, 10%);
+}
+
+.btn-style:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 0 0 5px hsl(252, 20%, 10%);
+    /* Lowering the shadow */
 }
