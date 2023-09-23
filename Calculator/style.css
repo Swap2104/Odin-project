@@ -24,7 +24,6 @@ body {
 
 #container {
     width: 100%;
-    /* border: 2px solid black; */
     display: flex;
     justify-content: center;
 }
@@ -46,24 +45,19 @@ body {
 #display-outline {
     width: 98%;
     height: 150px;
-    /* border: 1px solid rgb(0, 0, 0); */
     margin: 2px;
     border-radius: 5px;
     background-color: #9BA4B5;
     color: #333333;
-    /* text-align: right; */
     text-align: start;
     font-size: 30px;
     display: flex;
-    /* flex-direction: column; */
     align-items: end;
-    /* align-items: right; */
 }
 
 #display {
     padding: 10px;
     width: 100%;
-    /* border: 2px solid black; */
     text-align: right;
 
 }
@@ -74,7 +68,6 @@ body {
     justify-self: center;
     width: 100%;
     height: fit-content;
-    /* border: 2px solid rgb(255, 0, 0); */
 }
 
 .btn-style {
@@ -85,14 +78,11 @@ body {
     border-radius: 5px;
     color: #F1F6F9;
     background-color: #212A3E;
-    /* background-color: #F1F6F9; */
     -webkit-box-shadow: 0 0 10px hsl(252, 20%, 10%);
     box-shadow: 0 0 10px hsl(252, 20%, 10%);
 }
 
 .btn-style:active {
     transform: scale(0.98);
-    /* Scaling button to 0.98 to its original size */
     box-shadow: 0 0 5px hsl(252, 20%, 10%);
-    /* Lowering the shadow */
 }

@@ -21,7 +21,7 @@ clear.addEventListener('click', () => {
     display.textContent = userInput // Displays the user input 
 })
 
-// Event Listeners for Equal to  button
+// Event Listeners for Equals to  button
 equal.addEventListener('click', () => {
     userInput = eval(userInput)// Evaluates the user input 
     display.textContent = userInput // Displays the user input 
