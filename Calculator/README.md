@@ -4,7 +4,7 @@
 Calculator using javascript which allows the user to perform basic arithmetic operations.
 
 ## Image
-![Calculator](https://github.com/Swapnilnaique/Odin-project/blob/master/Calculator/Calculator.png)
+![Calculator](https://github.com/Swapnilnaique/Odin-project/blob/master/Calculator/calculator.png)
 
 ## Working
 ```javascript
