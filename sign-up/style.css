@@ -1,0 +1,172 @@
+  @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+  * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: "K2D";
+  }
+
+  :root {
+      --text: #ffffff;
+      --background: #0a141a;
+      --primary: #305e78;
+      --secondary: #0d1a21;
+      --accent: #478bb3;
+      --font-family: 'K2D';
+      --error: rgb(253, 102, 102);
+      overflow-x: hidden;
+      color: var(--text);
+  }
+
+  *::selection{
+    background-color: var(--accent);
+  }
+
+
+  /* div {
+      border: 2px solid black;
+  } */
+
+  #root {
+      display: flex;
+  }
+
+  #image {
+      background-image: url(background.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      width: 50%;
+  }
+
+  #form {
+      background-color: var(--background);
+      height: 100vh;
+      width: 50%;
+      display: grid;
+  }
+
+  #Sign-Up-Form {
+      margin-top: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-self: center;
+      height: 100%;
+  }
+
+  #head {
+      position: relative;
+      top: 5rem;
+      margin: 10px;
+      padding: 5px;
+      margin-left: 47px;
+      height: fit-content;
+      font-size: 2.5rem;
+  }
+
+  input {
+      height: 3.4rem;
+      margin: 10px;
+      width: 20.4rem;
+      padding: 5px;
+      border: 1px solid var(--accent);
+      background-color: var(--background);
+      border-radius: 7px;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+
+  input:invalid {
+      border: 1px solid var(--error);
+  }
+
+  input:focus {
+      background-color: var(--background);
+      color: var(--text);
+      border: 1px solid var(--primary);
+  }
+
+  input:valid {
+      background-color: var(--background);
+      color: var(--text);
+      border: 1px solid var(--primary);
+  }
+
+  input::placeholder {
+      color: var(--text);
+  }
+
+  #btn {
+      height: 3.4rem;
+      margin: 10px;
+      width: 20.4rem;
+      padding: 5px;
+      border-radius: 7px;
+      outline: none;
+      background-color: var(--primary);
+      border: 1px solid var(--accent);
+      color: var(--text);
+      box-shadow: 0 0 10px var(--secondary);
+      margin-top: 3rem;
+  }
+
+  #btn:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px var(--secondary);
+  }
+
+  #info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+
+  #btn-info {
+      margin: 2rem;
+      height: 3.4rem;
+      margin: 10px;
+      width: 20.4rem;
+      padding: 5px;
+      border-radius: 7px;
+      outline: none;
+      background-color: var(--primary);
+      border: 1px solid var(--accent);
+      color: var(--text);
+      box-shadow: 0 0 10px var(--secondary);
+  }
+
+  #btn-info:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px var(--secondary);
+  }
+
+  #header {
+      margin-left: 1rem;
+      margin-bottom: 2rem;
+  }
+
+  #image::before {
+      content: "";
+      position: absolute;
+      right: 50%;
+      bottom: 0;
+      background: linear-gradient(to left, var(--background), transparent);
+      width: 50%;
+      height: 100%;
+  }
+
+  #para a{
+    color: var(--accent);
+    text-decoration: none;
+  }
+  #para{
+    padding: 1rem;
+  }

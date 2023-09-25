@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div id="image">
+            <div id="info">
+                <div id="head2">
+                    <h1 id="header">Sign-Up</h1>
+                    <button id="btn-info">Continue As Guest</button>
+                </div>
+            </div>
+        </div>
+        <div id="form">
+            <div id="head">
+                <h2>Create Account</h2>
+            </div>
+            <form action="" method="get" id="Sign-Up-Form">
+                <div class="row1">
+                    <input type="text" name="firstName" id="firstName" placeholder="First name" maxlength="15">
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" maxlength="15">
+                </div>
+                <div class="row2">
+                    <input type="email" name="email" id="email" placeholder="Email" maxlength="15">
+                    <input type="number" name="number" id="number" placeholder="Number" minlength="10">
+                </div>
+                <div class="row3">
+                    <input type="password" name="password" id="password" placeholder="Password" minlength="8">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
+                        minlength="8">
+                </div>
+                <div id="button">
+                    <button type="submit" id="btn">
+                        Create Account
+                    </button>
+                    <p id="para">Already Have An Account?
+                        <a href="#" target="_blank" rel="noopener noreferrer">Log in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
