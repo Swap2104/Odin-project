@@ -161,6 +161,7 @@
       background: linear-gradient(to left, var(--background), transparent);
       width: 50%;
       height: 100%;
+      pointer-events: none;
   }
 
   #para a{
