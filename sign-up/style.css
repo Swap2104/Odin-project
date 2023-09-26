@@ -15,12 +15,13 @@
       --accent: #478bb3;
       --font-family: 'K2D';
       --error: rgb(253, 102, 102);
+      --success: rgb(89, 158, 89);
       overflow-x: hidden;
       color: var(--text);
   }
 
-  *::selection{
-    background-color: var(--accent);
+  *::selection {
+      background-color: var(--accent);
   }
 
 
@@ -83,8 +84,16 @@
       appearance: none;
   }
 
+  .input-confirm-password {
+      background-color: var(--background);
+      color: var(--text);
+      border: 1px solid var(--primary);
+  }
+
+
   input:invalid {
       border: 1px solid var(--error);
+      color: var(--text);
   }
 
   input:focus {
@@ -159,15 +168,23 @@
       right: 50%;
       bottom: 0;
       background: linear-gradient(to left, var(--background), transparent);
-      width: 50%;
+      width: 30%;
       height: 100%;
       pointer-events: none;
   }
 
-  #para a{
-    color: var(--accent);
-    text-decoration: none;
+  #para a {
+      color: var(--accent);
+      text-decoration: none;
   }
-  #para{
-    padding: 1rem;
+
+  #para {
+      padding: 1rem;
+  }
+
+  #head-signed-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
   }
