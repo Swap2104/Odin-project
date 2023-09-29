@@ -132,6 +132,9 @@ input[type=radio]{
     display: flex;
     align-items: center;
 }
+.delete{
+    border: 2px solid red;
+}
 
 .hidden{
     display: none;

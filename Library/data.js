@@ -3,14 +3,17 @@ let author_input = document.getElementById('author')
 let pages_input = document.getElementById('pages')
 let read_input = document.getElementsByName('read')
 let save = document.getElementById('save')
+let delete_btn=document.getElementsByClassName('delete')
+let card_divs=document.getElementsByClassName('cards')
+
 let library = []
 // let cards = document.getElementsByClassName('cards')
 console.log("hello")
 
-// let book2 = new Books("Cant hurt me", "David Goggins", 301, "Yes")
-// let book3 = new Books("Clean Code", "Robert Cecil Martin", 400, "No")
+let book2 = new Books("Cant hurt me", "David Goggins", 301, "Yes")
+let book3 = new Books("Clean Code", "Robert Cecil Martin", 400, "No")
 // display(book2)
-// display(book3)
+display(book3)
 // library.push(book2)
 // library.push(book3)
 
@@ -81,5 +84,27 @@ function display(book) {
       } 
     else{
         para.style.display="none"
+    }
+    if (cards.length < 1) {
+        para.textContent = "No books entered yet!"
+        carousel.className='para-style'
+      } 
+
+    delete_event()
+}
+
+
+
+function delete_event(){
+    const delete_btns = document.getElementsByClassName('delete');
+    
+    for (let i = 0; i < delete_btns.length; i++) {
+        delete_btns[i].addEventListener('click', (e)=>{
+            // Find the closest '.cards' div to the clicked button and remove it
+            const closest_div = e.target.closest('.cards');
+            if (closest_div) {
+                closest_div.remove();
+            }
+        });
     }
 }
