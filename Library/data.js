@@ -13,7 +13,7 @@ console.log("hello")
 let book2 = new Books("Cant hurt me", "David Goggins", 301, "Yes")
 let book3 = new Books("Clean Code", "Robert Cecil Martin", 400, "No")
 // display(book2)
-display(book3)
+// display(book3)
 // library.push(book2)
 // library.push(book3)
 
@@ -65,18 +65,18 @@ function display(book) {
     cards.appendChild(book_name).textContent = `Name: ${book.book_name}`
     cards.appendChild(author).textContent = `Author: ${book.author}`
     cards.appendChild(pages).textContent = `Pages: ${book.pages}`
-    cards.appendChild(read).textContent = `Read?: ${book.read}`
+    cards.appendChild(read).textContent = `Read?: ${book.read}`.className="read"
     cards.appendChild(flex)
-    flex.appendChild(btn1).className = "btn-style"
+    // flex.appendChild(btn1).className = "btn-style"
     flex.appendChild(btn2).className = "btn-style red delete"
     btn2.textContent = "Delete"
-    if (book.read === "No") {
-        btn1.textContent = "Read"
-        btn1.className = "btn-style green"
-    } else {
-        btn1.textContent = "Not Read"
-        btn1.className = "btn-style red"
-    }
+    // if (book.read === "No") {
+    //     btn1.textContent = "Read"
+    //     btn1.className = "btn-style green read"
+    // } else {
+    //     btn1.textContent = "Not Read"
+    //     btn1.className = "btn-style red read"
+    // }
 
     if (cards.length < 1) {
         para.textContent = "No books entered yet!"
@@ -85,15 +85,9 @@ function display(book) {
     else{
         para.style.display="none"
     }
-    if (cards.length < 1) {
-        para.textContent = "No books entered yet!"
-        carousel.className='para-style'
-      } 
 
     delete_event()
 }
-
-
 
 function delete_event(){
     const delete_btns = document.getElementsByClassName('delete');
@@ -107,4 +101,24 @@ function delete_event(){
             }
         });
     }
+
+    if (cards.length < 1) {
+        para.textContent = "No books entered yet!"
+        carousel.className='para-style'
+      } 
+    else{
+        para.style.display="none"
+    }
 }
+
+// function set_read(book) {
+//     const set_read = document.getElementsByClassName('read');
+
+//     for (let i = 0; i < set_read.length; i++) {
+//         set_read[i].addEventListener('click', (e)=>{
+//             // Find the closest '.cards' div to the clicked button and remove it
+//             const closest_read_div = e.target.closest('.read');
+//             // book.read==
+//         });
+//     }
+// }

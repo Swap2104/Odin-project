@@ -133,7 +133,7 @@ input[type=radio]{
     align-items: center;
 }
 .delete{
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .hidden{
@@ -150,4 +150,7 @@ input[type=radio]{
     width: 100%;
     padding: .3rem;
     margin: .3rem;
+}
+.read{
+    /* border: 2px solid black; */
 }
