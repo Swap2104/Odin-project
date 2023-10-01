@@ -3,9 +3,14 @@ let gameOver = false
 const game = (() => {
     let matrix = []
     const squares = document.getElementsByClassName('squares');
-    const gameStatus = (winner) => {
+    const gameStatus = (winner, draw) => {
         gameOver = true
-        console.log(`${winner} Wins`)
+        if (draw) {
+            console.log("Its a draw");
+        }
+        if (winner!=="") {
+            console.log(`${winner} Wins`)
+        }
     }
 
     const gameDisplayController = () => {
@@ -65,7 +70,7 @@ const game = (() => {
         for (let i = 0; i < matrix.length; i++) {
             if (allEqual(matrix[i]) && matrix[i][0] !== "") {
                 // console.log(`${matrix[i][0]} is a winner.`);
-                game.gameStatus(matrix[i][0])
+                game.gameStatus(matrix[i][0], false)
                 return true;
             }
         }
@@ -75,7 +80,7 @@ const game = (() => {
             const column = matrix.map(row => row[i]);
             if (allEqual(column) && column[0] !== "") {
                 // console.log(`${matrix[0][i]} is a winner.`);
-                game.gameStatus(matrix[0][i])
+                game.gameStatus(matrix[0][i], false)
                 return true;
             }
         }
@@ -86,17 +91,20 @@ const game = (() => {
 
         if (allEqual(diagonal1) && diagonal1[0] !== "") {
             // console.log(`${matrix[0][0]} is a winner.`);
-            game.gameStatus(matrix[0][0])
+            game.gameStatus(matrix[0][0], false)
             return true;
         }
 
         if (allEqual(diagonal2) && diagonal2[0] !== "") {
             // console.log(`${matrix[0][2]} is a winner.`);
-            game.gameStatus(matrix[0][2])
+            game.gameStatus(matrix[0][2], false)
             return true;
         }
 
-        console.log("No winner yet.");
+        if (gameBoard.includes("")===false) {
+            game.gameStatus("", true)
+        }
+        // console.log("No winner yet.");
         return false; // Return false to indicate no winner found yet
     };
 
