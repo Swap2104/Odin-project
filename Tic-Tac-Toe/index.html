@@ -22,10 +22,16 @@
                 <div class="x display-cards"><h1>X</h1></div>
                 <div class="o display-cards"><H1>O</H1></div>
                 <div class="button">
-                    <button class="btn">Start</button>
+                    <button id="btn">Start</button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click', ()=>{
+            window.location="http://127.0.0.1:5500/Odin-project/Tic-Tac-Toe/game.html"
+        })
+    </script>
 </body>
 </html>

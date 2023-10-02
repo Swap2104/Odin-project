@@ -31,7 +31,8 @@
     justify-content: center;
     font-size: larger;
     border-radius: 10px;
-    box-shadow: #44475a 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0,0,0,0.1) 30px 24px 30px 11px;
+
 }
 
 .head{
@@ -102,10 +103,14 @@
     justify-content: center;
     align-self: center;
     justify-self: center;
-    border: 2px solid #bd93f9;
+    /* border: 2px solid #bd93f9; */
+    border: 1px solid #282a36; 
     width: 75%;
     height: 100%;
     border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 30px 24px 30px 11px;
+    background-color: #44475a;
+
 }
 
 .button{
@@ -117,10 +122,17 @@
     grid-column: 1/4;
 }
 
-.btn{
+#btn{
     background-color: #44475a;
     width: 5rem;
     height: 2rem;
     border-radius: 10px;
-    border: 1px solid #bd93f9;
+    border: none;
+    border: 1px solid #282a36;
+    box-shadow: rgba(0,0,0,0.1) 30px 24px 30px 11px;
+
+}
+
+#btn:active{
+    transform: scale(.95);
 }
