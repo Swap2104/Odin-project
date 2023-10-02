@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicTacToe</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/mr-pixel" type="text/css" />
+    <title>TicTacToe</title>
 </head>
-
 <body>
-    <div id="container">
-        <div id="head">
+    <div class="container">
+        <div class="head">
             <h1>TicTacToe</h1>
         </div>
-        <div id="board">
-            <div class="squares" id="0"></div>
-            <div class="squares" id="1"></div>
-            <div class="squares" id="2"></div>
-            <div class="squares" id="3"></div>
-            <div class="squares" id="4"></div>
-            <div class="squares" id="5"></div>
-            <div class="squares" id="6"></div>
-            <div class="squares" id="7"></div>
-            <div class="squares" id="8"></div>
+        <div id="start">
+            <div class="display">
+                <h3 class="player display-name">You</h3>
+                <div class="vs">
+                    <h1>vs</h1>
+                </div>
+                <h3 class="computer display-name">Computer</h3>
+                <div class="x display-cards"><h1>X</h1></div>
+                <div class="o display-cards"><H1>O</H1></div>
+                <div class="button">
+                    <button class="btn">Start</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-<script src="script.js"></script>
-
 </html>

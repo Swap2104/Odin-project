@@ -6,7 +6,7 @@
     font-family: 'VTFMisterPixelRegular';
 }
 
-#container{
+.container{
     height: 100vh;
     width: 100%;
     display: grid;
@@ -34,7 +34,7 @@
     box-shadow: #44475a 1.95px 1.95px 2.6px;
 }
 
-#head{
+.head{
     height: 100%;
     background-color: #44475a;
     color: #bd93f9;
@@ -57,4 +57,70 @@
 
 .parent > h1{
     font-size: 3.5rem;
+}
+
+#start{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.display{
+    height: 50vh;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 5fr/ 1fr 1fr 1fr;
+    margin: 2rem;
+    /* gap: 2rem; */
+}
+
+.display-name{
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.vs{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 5rem;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    width: 75%;
+    height: 100%;
+    /* border: 2px solid #bd93f9; */
+}
+
+.display-cards{
+    font-size: 5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    border: 2px solid #bd93f9;
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.button{
+    /* margin: 2rem; */
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    width: 100%;
+    grid-column: 1/4;
+}
+
+.btn{
+    background-color: #44475a;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid #bd93f9;
 }
