@@ -54,7 +54,7 @@ const game = (() => {
             console.log(gameOver == false , gameBoard[compRand] !== "" , i < 4)
             console.log(gameOver == false && gameBoard[compRand] !== "" && i < 4)
             // && i < 3
-        } while (gameOver == false && gameBoard[compRand] !== "" && i <= 4);
+        } while (gameOver == false && gameBoard[compRand] !== "" && i < 4);
 
         gameBoard[compRand] = "O";
         game.gameDisplayController();

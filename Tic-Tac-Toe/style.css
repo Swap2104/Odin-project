@@ -4,6 +4,7 @@
     box-sizing: border-box;
     color: #bd93f9;
     font-family: 'VTFMisterPixelRegular';
+    text-shadow: 5px 6px 9px rgba(0,0,0,0.48);
 }
 
 .container{
