@@ -51,7 +51,10 @@ const game = (() => {
         do {
             compRand = Math.floor(Math.random() * 9);
             i++
-        } while (gameBoard[compRand] !== "" && i < 3 && gameOver == false);
+            console.log(gameOver == false , gameBoard[compRand] !== "" , i < 4)
+            console.log(gameOver == false && gameBoard[compRand] !== "" && i < 4)
+            // && i < 3
+        } while (gameOver == false && gameBoard[compRand] !== "" && i <= 4);
 
         gameBoard[compRand] = "O";
         game.gameDisplayController();
