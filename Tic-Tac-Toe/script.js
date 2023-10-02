@@ -1,23 +1,36 @@
 
-let gameOver = false
 const game = (() => {
+    let gameOver = false
     let matrix = []
     const squares = document.getElementsByClassName('squares');
     const gameStatus = (winner, draw) => {
+        let para
         gameOver = true
         if (draw) {
-            console.log("Its a draw");
+            window.location='http://127.0.0.1:5500/Odin-project/Tic-Tac-Toe/status.html';
+            window.addEventListener("DOMContentLoaded", function () {
+                // Your code to be executed after the new page has fully loaded
+                para = document.getElementById('para');
+                console.log(para);
+                para.textContent = "It's a draw";
+                console.log("It's a draw");
+            });
         }
         if (winner!=="") {
-            console.log(`${winner} Wins`)
+            window.location='http://127.0.0.1:5500/Odin-project/Tic-Tac-Toe/status.html'
+            setTimeout(function() {
+                //your code to be executed after 1 second
+                para= document.getElementById('para')
+                console.log(para)
+                para.textContent=`${winner} Wins`
+                console.log(`${winner} Wins`)
+            }, 3000);
         }
     }
 
     const gameDisplayController = () => {
         for (let i = 0; i < squares.length; i++) {
             squares[i].textContent = gameBoard[i];
-            // console.log(gameBoard[i])
-            // console.log(gameBoard[10])
         }
     }
 
@@ -107,7 +120,6 @@ const game = (() => {
         // console.log("No winner yet.");
         return false; // Return false to indicate no winner found yet
     };
-
 
     const allEqual = arr => arr.every(val => val === arr[0]);
 
