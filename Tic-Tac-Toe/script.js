@@ -1,8 +1,9 @@
-
-let gameOver = false
+// declaring the game object
 const game = (() => {
-    let matrix = []
-    const squares = document.getElementsByClassName('squares');
+    let matrix = [] //matrix to store the game board
+    const squares = document.getElementsByClassName('squares'); //selecting individual squares.
+
+    // gameStatus method: used to display the winner when the game is over.
     const gameStatus = (winner, draw) => {
         gameOver = true
         if (draw) {
@@ -20,18 +21,17 @@ const game = (() => {
         }
     }
 
+    //gameDisplayController() method: displays the X and Os on the squares.
     const gameDisplayController = () => {
         for (let i = 0; i < squares.length; i++) {
             squares[i].textContent = gameBoard[i];
-            // console.log(gameBoard[i])
-            // console.log(gameBoard[10])
         }
     }
 
+    //userInput() method: takes the user input and stores the value in the gameBoard array
     const userInput = () => {
         for (let i = 0; i < squares.length; i++) {
             squares[i].addEventListener('click', () => {
-                // console.log("hello from userInput");
                 const squareIndex = parseInt(squares[i].id);
                 if (gameBoard[squareIndex] === "" && gameOver == false) {
                     gameBoard[squareIndex] = "X";
@@ -39,12 +39,12 @@ const game = (() => {
                     game.computerInput();
                     game.listToMatrix(gameBoard, 3)
                     game.checkWinner()
-                    //    console.log(matrix.length)
                 }
             });
         }
     }
 
+    //computerInput() method:  generates the computer input and stores the value in the gameBoard array
     const computerInput = () => {
         let compRand;
         let i = 0
@@ -53,13 +53,13 @@ const game = (() => {
             i++
             console.log(gameOver == false , gameBoard[compRand] !== "" , i < 4)
             console.log(gameOver == false && gameBoard[compRand] !== "" && i < 4)
-            // && i < 3
         } while (gameOver == false && gameBoard[compRand] !== "" && i < 4);
 
         gameBoard[compRand] = "O";
         game.gameDisplayController();
     }
 
+    //listToMatrix() method: Converts the gameBoard array into a matrix
     const listToMatrix = (list, elementsPerSubArray) => {
         let i, k;
 
@@ -71,15 +71,13 @@ const game = (() => {
 
             matrix[k].push(list[i]);
         }
-        // return matrix;
-        // console.log(matrix[0]);
     }
 
+    //checkWinner() method: checks for the winner and Draw using the matrix
     const checkWinner = () => {
         // Check rows
         for (let i = 0; i < matrix.length; i++) {
             if (allEqual(matrix[i]) && matrix[i][0] !== "") {
-                // console.log(`${matrix[i][0]} is a winner.`);
                 game.gameStatus(matrix[i][0], false)
                 return true;
             }
@@ -89,7 +87,6 @@ const game = (() => {
         for (let i = 0; i < matrix[0].length; i++) {
             const column = matrix.map(row => row[i]);
             if (allEqual(column) && column[0] !== "") {
-                // console.log(`${matrix[0][i]} is a winner.`);
                 game.gameStatus(matrix[0][i], false)
                 return true;
             }
@@ -100,13 +97,11 @@ const game = (() => {
         const diagonal2 = matrix.map((row, index) => row[matrix.length - index - 1]);
 
         if (allEqual(diagonal1) && diagonal1[0] !== "") {
-            // console.log(`${matrix[0][0]} is a winner.`);
             game.gameStatus(matrix[0][0], false)
             return true;
         }
 
         if (allEqual(diagonal2) && diagonal2[0] !== "") {
-            // console.log(`${matrix[0][2]} is a winner.`);
             game.gameStatus(matrix[0][2], false)
             return true;
         }
@@ -114,13 +109,10 @@ const game = (() => {
         if (gameBoard.includes("") === false) {
             game.gameStatus("", true)
         }
-        // console.log("No winner yet.");
         return false; // Return false to indicate no winner found yet
     };
 
-
     const allEqual = arr => arr.every(val => val === arr[0]);
-
 
     return {
         gameDisplayController,
@@ -133,5 +125,6 @@ const game = (() => {
 })();
 
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
+let gameOver = false
 game.gameDisplayController()
 game.userInput();
