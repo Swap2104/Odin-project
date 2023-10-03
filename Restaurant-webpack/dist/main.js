@@ -1,0 +1,1 @@
+document.write("webpack page is working");
