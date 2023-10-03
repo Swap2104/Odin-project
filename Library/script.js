@@ -19,8 +19,6 @@ if (cards.length < 1) {
 
 
 button.addEventListener('click', () => {
-  // para.className="hidden"
-  // form.classList.remove("hidden")
   hideForm()
 })
 
