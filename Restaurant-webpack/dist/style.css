@@ -1,49 +1,100 @@
-*{
-    /* color: brown; */
-    margin:0px;
-    padding: 0px;
-    box-sizing:border-box ;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 
-/** index.html main element */
-#content{
+  * {
+      /* color: brown; */
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Croissant One', cursive;
+  }
+
+  /** index.html main element */
+  #content {
+      display: grid;
+      grid-template: 5fr 1fr 7fr 1fr/ 1fr;
+      height: 100vh;
+      width: 100%;
+  }
+
+  /** header.js*/
+  .head {
     display: grid;
-    grid-template: 5fr 1fr 7fr 1fr/ 1fr;
-    height: 100vh;
-    width: 100%;
-}
-
-/** header.js*/
-.head{
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/header_image2.png');
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-size: cover;
+    /* background-color: beige; */
     /* height: 45vh; */
     /* width: 100%; */
-    background-color: beige;
-}
+    position: relative;
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  .head>h1{
+    z-index: 2;
+  }
+
+  .head::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #151515, transparent);
+    width: 100%;
+    height: 25rem;
+    opacity: .8;
+  }
 
 
-/** footer.js */
-#footer{
+  /** footer.js */
+  #footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      /* width: 100%; */
+      /* height: 5vh; */
+      background-color: black;
+  }
+
+  /** nav-bar.js*/
+  #navbar {
+      border-bottom: 1px solid black;
+      background-color: white;
+      display: grid;
+      grid-template: 1fr/ repeat(3, 1fr);
+      /* width: 100%; */
+      /* height: 5vh; */
+  }
+
+  .nav-bar-items:nth-child(2){
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
+  
+  .nav-bar-items{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 2s;
+    transform: translateY(0px);
+  }
+
+  .nav-bar-items:hover p{
+    transition: transform 1s;
+    transform: translateY(-7px);
+  }
+
+  .nav-bar-items:active{
+    background-color: #151515;
     color: white;
-    /* width: 100%; */
-    /* height: 5vh; */
-    /* position: absolute; */
-    /* bottom: 0px;  */
-    background-color:black;
-}
+  }
 
-/** nav-bar.js*/
-#navbar{
-    background-color: rgb(243, 18, 18);
-    /* width: 100%; */
-    /* height: 5vh; */
-}
-
-/** main-div.js */
-#main{
-    /* height: 50vh; */
-    /* width: 100%; */
-    background-color: blueviolet;
-}
+  /** main-div.js */
+  #main {
+      /* height: 50vh; */
+      /* width: 100%; */
+      background-color: white;
+  }

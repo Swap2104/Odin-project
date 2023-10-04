@@ -3,7 +3,7 @@ import { createFooter } from "./footer";
 import { createNavBar } from "./nav-bar";
 import { createMainDiv } from "./main-div";
 function initialLoad(){   
-    createHeader()
+    createHeader("Flora")
     createNavBar()
     createMainDiv()
     createFooter("Flora Copyright 2023")
