@@ -1,1 +1,2 @@
-document.write("webpack page is working")
+import { initialLoad } from "./initial-load";
+initialLoad()
