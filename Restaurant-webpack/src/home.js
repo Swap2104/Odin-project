@@ -3,24 +3,16 @@ import { contact } from "./contact"
 import { menu } from "./menu"
 function home() {
     let content = document.getElementById('content')
-    // content.innerHTML = ""
+    content.innerHTML = ""
     initialLoad()
 
     let menu_nav = document.getElementById('menu')
     menu_nav.addEventListener('click', ()=>{
-        console.log(content.innerHTML)
-        content.innerHTML = ""
-        console.log("hello")
-        initialLoad()
         menu()
     })
 
     let contact_nav = document.getElementById('contact')
     contact_nav.addEventListener('click', () => {
-        console.log(content.innerHTML)
-        content.innerHTML = ""
-        console.log("hello")
-        initialLoad()
         contact()
     })
 
