@@ -4,5 +4,5 @@ function createMainDiv(){
     mainDiv.id="main"
     main.appendChild(mainDiv)
 }
-
-export { createMainDiv }
+export let mainDiv
+export {createMainDiv }

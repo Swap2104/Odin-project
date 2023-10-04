@@ -4,15 +4,18 @@ function createNavBar(){
     let home  =document.createElement('div')
     let menu =document.createElement('div')
     let contact =document.createElement('div')
-    home.className="nav-bar-items"
-    menu.className="nav-bar-items"
-    contact.className="nav-bar-items"
+    home.id="home"
+    menu.id="menu"
+    contact.id="contact"
     let home_para=document.createElement('p')
     let menu_para=document.createElement('p')
     let contact_para =document.createElement('p')
     home_para.textContent="Home"
     menu_para.textContent="Menu"
     contact_para.textContent="Contact"
+    // home_para.id="Home"
+    // menu_para.id="Menu"
+    // contact_para.id="Contact"
     navBar.id="navbar"
     main.appendChild(navBar)
     navBar.appendChild(home)
