@@ -1,8 +1,10 @@
 console.log("hello world")
-import { addItem } from "./addItem"
+import { Task } from "./task-object"
 import { createProject } from "./projects"
+import { addTaskToProject } from "./addTaskToProject"
 
-addItem("test", "TestName", "testDesc", "task_obj1")
-addItem("test32", "TestName12", "testDesc32", "task_obj2")
+let task = new Task("title", "name", "desc")
 createProject("work")
-// createProject("task_obj2")
+createProject("gym")
+createProject("study")
+addTaskToProject("work", task)
