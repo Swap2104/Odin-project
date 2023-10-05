@@ -1,11 +1,10 @@
 # Library
 ## About
 This web page allows users to store information about all the books they have read and want to read.
+## Image
+![home page](https://github.com/Swapnilnaique/Odin-project/blob/master/Library/home.png)
 ## Working
-
-<!-- image -->
-
-The books add by the user are displayed on the home page with a button to add more books.
+The books added by the user are displayed on the home page with a button to add more books.
 
 ```javascript
 button.addEventListener('click', () => {
