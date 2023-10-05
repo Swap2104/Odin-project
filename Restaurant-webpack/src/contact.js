@@ -22,6 +22,23 @@ function contact() {
         menu()
     })
 
+    let contact_main = document.getElementById("main")
+    contact_main.className = "contact-main"
+    let contactCard = document.createElement('div')
+    contactCard.id = "contact-card"
+    contact_main.appendChild(contactCard)
+    let card_email = document.createElement('p')
+    let card_phone = document.createElement('p')
+    let card_address = document.createElement('p')
+    let card_img = document.createElement('div')
+    card_img.id="contact-card-img"
+    card_email.textContent = "Email:  flora2023@webpack.com"
+    card_phone.textContent = "Phone Number:  (555) 123-4567"
+    card_address.textContent = `Address:  Flora 123 Gourmet Street Foodville, CA 98765 United States`
+    contactCard.appendChild(card_phone)
+    contactCard.appendChild(card_email)
+    contactCard.appendChild(card_address)
+    contactCard.appendChild(card_img)
 
 }
 export { contact }
