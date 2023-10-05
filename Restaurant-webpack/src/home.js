@@ -42,9 +42,9 @@ function home() {
 
 
     info_div2.appendChild(img)
-    info_div2.appendChild(para1)
+    info_div2.appendChild(para2)
 
-    info_div.appendChild(para2)
+    info_div.appendChild(para1)
     info_div.appendChild(img2)
 
 
