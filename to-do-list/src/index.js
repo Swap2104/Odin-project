@@ -1,4 +1,3 @@
-console.log("hello world")
 import { Task } from "./task-object"
 import { createProject, projects } from "./projects"
 import { addTaskToProject } from "./addTaskToProject"
@@ -8,12 +7,16 @@ initialLoad()
 
 let task = new Task("title", "name", "desc")
 let task1 = new Task("title", "name", "desc")
+let task2 = new Task("code", "code", "code everyday")
+let task3 = new Task("read", "read", "read everyday")
 createProject("empty_project")
 createProject("work")
 createProject("gym")
 createProject("study")
 addTaskToProject("empty_project", task)
 addTaskToProject("empty_project", task1)
+addTaskToProject("empty_project", task2)
+addTaskToProject("empty_project", task3)
 
 //? console.log(projects)
 //? console.log(typeof(projects))

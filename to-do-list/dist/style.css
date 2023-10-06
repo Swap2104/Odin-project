@@ -21,14 +21,23 @@
     background-color: #44475a;
     grid-row: 1/3;
     display: grid;
-    grid-template:10% 40% 10% 40%/1fr;
+    grid-template:8% 42% 8% 42%/1fr;
     overflow-y: auto;
-    align-items: center;
+    /* align-items: center; */
+    padding: 2rem;
 }
 #side-bar>h1{
-    padding: 1rem;
     font-size: 2.4rem;
 }
+#side-bar>ul {
+    font-size: 2rem;
+    list-style: none;
+}
+
+#side-bar>ul li {
+    margin: 1rem;
+}
+
 
 #tasks{
     grid-row: 3/4;
