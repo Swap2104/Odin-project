@@ -60,6 +60,16 @@
     grid-template: 10%/1fr;
 }
 
+.btn{
+    width: 10%;
+    height: auto;
+    background-color: #BD93F9;
+    color: #282A36;
+    border-radius: 10px;
+    justify-self: center;
+    margin: .5rem;
+}
+
 #content {
     background-color: #282a36;
     height: 100vh;
