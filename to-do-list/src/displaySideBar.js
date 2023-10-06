@@ -1,5 +1,6 @@
 function displaySideBar(){
     let side_bar=document.getElementById('side-bar')
+    let task = document.getElementById('tasks')
     let tasks_list = JSON.parse(localStorage.getItem("projects"))[0].tasks
     console.log(tasks_list)
     // console.log(tasks_list[0].title)
@@ -10,6 +11,6 @@ function displaySideBar(){
         list.appendChild(li);
     }
 
-    side_bar.appendChild(list)
+    task.appendChild(list)
 }
 export {displaySideBar}
