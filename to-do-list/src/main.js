@@ -1,5 +1,6 @@
-import { Task } from "./task-object"
 import { save } from "./saveData"
+import { projects } from "./projects"
+import { target } from "./displaySideBar"
 function main() {
     let content = document.getElementById('content')
     let main = document.createElement('div')
@@ -48,7 +49,8 @@ function main() {
         in_title.value=""
         in_name.value=""
         in_desc.value=""
-        save(title_data, name_data, desc_data)
+        console.log(target)
+        save(title_data, name_data, desc_data, target)
         in_desc.remove()
         in_name.remove()
         in_title.remove()
