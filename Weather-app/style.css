@@ -11,4 +11,27 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: grid;
+    grid-template:  30% 70%/1fr 1fr ;
+}
+
+#temps{
+    display: grid;
+    font-size: 7rem;
+    color: white;
+    padding: 0 0 0 3rem ;
+    align-items: center;
+}
+
+#info{
+    align-items: center;
+    color: white;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    font-size: 3rem;
+}
+#info>div{
+    display: grid;
+    justify-content: end;
+    padding:1.7rem
 }
