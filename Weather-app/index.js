@@ -1,6 +1,13 @@
 //* 6bab9aaf64ab4007b2f71805230910
-
+let search_val="goa"
+function search(){
+    let input=document.getElementById('search')
+    search_val=input.value
+    console.log(search_val)
+    apiCall()
+}
 async function apiCall() {
+
 
     //* calculating dates
     const date = new Date();
@@ -31,7 +38,7 @@ async function apiCall() {
 
 
     //* fetching the data
-    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6bab9aaf64ab4007b2f71805230910&q=goa&dt=${full_date}`, { mode: 'cors' })
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6bab9aaf64ab4007b2f71805230910&q=${search_val}&dt=${full_date}`, { mode: 'cors' })
     const response_json = await response.json()
 
     //* saving objects form api response
