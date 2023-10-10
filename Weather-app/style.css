@@ -4,7 +4,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    color: white;
 }
 
 #root {
@@ -26,6 +25,7 @@
     display: grid;
     grid-template: 1fr/3fr 2fr;
     gap: 2rem;
+    color: white;
 }
 
 #bottom {
@@ -62,11 +62,12 @@
 #today {
     margin: 1rem;
     display: grid;
+    color: aliceblue;
     grid-template: 1fr 2fr 2fr / 1fr 1fr;
     /* frost effect */
     border-radius: 10px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.226);
+    backdrop-filter: blur(7px);
+    background-color: rgba(255, 255, 255, 0.326);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.342);
 }
@@ -77,15 +78,16 @@
 
 }
 
+/* 
 #hours>div {
     margin: 1rem;
-    /* frost effect */
+    frost effect
     border-radius: 10px;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.226);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.342);
-}
+} */
 
 /** basic layout setup  */
 
@@ -119,7 +121,8 @@
     align-items: end;
 }
 
-#current-mid, #current-bottom{
+#current-mid,
+#current-bottom {
     padding: 0 0 0 3rem;
     display: grid;
     font-size: 2rem;
@@ -129,10 +132,90 @@
 /** current style */
 
 /** info style */
-#info>div{
+#info>div {
     display: grid;
     align-items: center;
-    justify-content: center;
+    padding: 1.5rem;
+    /* justify-content: center; */
     font-size: 1.5rem;
 }
+
 /** info style */
+
+
+/** today style */
+#today>div>div {
+    /* border: 1px solid black; */
+    display: grid;
+    align-items: center;
+    padding: .7rem;
+}
+
+#today {
+    color: aliceblue;
+}
+
+#current-day {
+    /* grid-row: ; */
+    display: grid;
+    padding: .7rem;
+    align-items: end;
+    font-size: 1.4rem;
+    grid-column: 1/3;
+}
+
+#temp-con {
+    display: grid;
+}
+
+#today-info {
+    display: grid;
+}
+
+#sun {
+    display: grid;
+}
+
+#moon {
+    display: grid;
+}
+
+/** today style */
+
+/** Hour style */
+
+#hour1,
+#hour2,
+#hour3 {
+    margin: 1rem;
+    /* frost effect */
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.226);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.342);
+    display: grid;
+    grid-template: 40% 20% 40%/1fr;
+}
+
+#hour1-top,
+#hour2-top,
+#hour3-top {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+#hour1-bottom,
+#hour2-bottom,
+#hour3-bottom {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+#hour1-info, #hour2-info, #hour3-info{
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr ;
+}
+
+
+/** Hour style */
