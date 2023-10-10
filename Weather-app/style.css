@@ -10,7 +10,7 @@
     width: 100%;
     height: 100vh;
     padding: .5rem;
-    background-image: url(background-2.jpg);
+    background-image: url(./images/background-2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,6 +29,7 @@
 }
 
 #bottom {
+    color: white;
     display: grid;
     grid-template: 1fr/1fr 3fr;
     gap: 2rem;
@@ -41,7 +42,7 @@
     /* frost effect */
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.226);
+    background-color: rgba(47, 47, 47, 0.34);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.342);
 }
@@ -53,7 +54,8 @@
     /* frost effect */
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.226);
+    /* background-color: rgba(255, 255, 255, 0.34); */
+    background-color: rgba(47, 47, 47, 0.34);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.342);
 
@@ -66,8 +68,9 @@
     grid-template: 1fr 2fr 2fr / 1fr 1fr;
     /* frost effect */
     border-radius: 10px;
-    backdrop-filter: blur(7px);
-    background-color: rgba(255, 255, 255, 0.326);
+    backdrop-filter: blur(5px);
+    /* background-color: rgba(255, 255, 255, 0.34); */
+    background-color: rgba(47, 47, 47, 0.34);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.342);
 }
@@ -191,11 +194,12 @@
     /* frost effect */
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.226);
+    background-color: rgba(47, 47, 47, 0.34);
+    /* background-color: rgba(255, 255, 255, 0.34); */
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.342);
     display: grid;
-    grid-template: 40% 20% 40%/1fr;
+    grid-template: 40% 15% 45%/1fr;
 }
 
 #hour1-top,
@@ -210,11 +214,63 @@
 #hour3-bottom {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
+    align-items: center;
 }
 
-#hour1-info, #hour2-info, #hour3-info{
+#hour1-bottom>div,
+#hour2-bottom>div,
+#hour3-bottom>div {
+    padding: .8rem;
+}
+
+#hour1-temp,
+#hour2-temp,
+#hour3-temp {
     display: grid;
-    grid-template: 1fr 1fr/ 1fr ;
+    align-items: center;
+    font-size: 2.8rem;
+    padding-left: 2rem;
+}
+
+#hour1-info,
+#hour2-info,
+#hour3-info {
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+}
+
+#date1,
+#date2,
+#date3 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#hour1-condition,
+#hour2-condition,
+#hour3-condition {
+    padding-left: .8rem;
+    font-size: 1.4rem;
+}
+
+
+
+
+#icon1,
+#icon2,
+#icon3 {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#hour1-mid,
+#hour2-mid,
+#hour3-mid {
+    display: grid;
+    align-items: center;
 }
 
 

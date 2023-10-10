@@ -90,28 +90,31 @@ async function apiCall() {
     console.log(`\nHour: ${forecast.hour[index + 1].time}`)
     console.log(`Temperature: ${forecast.hour[index + 1].temp_c}C`)
     console.log(`Condition: ${forecast.hour[index + 1].condition.text}`)
+    console.log(`Condition: ${forecast.hour[index + 1].condition.icon}`)
     console.log(`Chance of rain: ${forecast.hour[index + 1].chance_of_rain}%`)
     console.log(`Humidity: ${forecast.hour[index + 1].humidity}%`)
     console.log(`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`)
     console.log(`Wind Direction: ${forecast.hour[index + 1].wind_dir}`)
     console.log(`Condition: ${forecast.hour[index + 1].condition.icon}`)
-    
+
     console.log(`\nHour: ${forecast.hour[index + 2].time}`)
     console.log(`Temperature: ${forecast.hour[index + 2].temp_c}C`)
     console.log(`Condition: ${forecast.hour[index + 2].condition.text}`)
+    console.log(`Condition: ${forecast.hour[index + 2].condition.icon}`)
     console.log(`Chance of rain: ${forecast.hour[index + 2].chance_of_rain}%`)
     console.log(`Humidity: ${forecast.hour[index + 2].humidity}%`)
-    console.log(`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`)
-    console.log(`Wind Direction: ${forecast.hour[index + 1].wind_dir}`)
+    console.log(`Wind speed: ${forecast.hour[index + 2].wind_kph}Kph`)
+    console.log(`Wind Direction: ${forecast.hour[index +2].wind_dir}`)
     console.log(`Condition: ${forecast.hour[index + 2].condition.icon}`)
-    
+
     console.log(`\nHour: ${forecast.hour[index + 3].time}`)
     console.log(`Temperature: ${forecast.hour[index + 3].temp_c}C`)
     console.log(`Condition: ${forecast.hour[index + 3].condition.text}`)
+    console.log(`Condition: ${forecast.hour[index + 3].condition.icon}`)
     console.log(`Chance of rain: ${forecast.hour[index + 3].chance_of_rain}%`)
     console.log(`Humidity: ${forecast.hour[index + 3].humidity}%`)
-    console.log(`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`)
-    console.log(`Wind Direction: ${forecast.hour[index + 1].wind_dir}`)
+    console.log(`Wind speed: ${forecast.hour[index + 3].wind_kph}Kph`)
+    console.log(`Wind Direction: ${forecast.hour[index + 3].wind_dir}`)
     console.log(`Condition: ${forecast.hour[index + 3].condition.icon}`)
 
 
@@ -166,17 +169,61 @@ async function apiCall() {
     //*Hours
 
     // hour1
-    // const avg_temp = document.getElementById('avg-temp')
-    // const condition_today = document.getElementById('condition-today')
-    // const today_humidity = document.getElementById('today-humidity')
-    // const today_rain = document.getElementById('today-rain')
-    // const sunrise = document.getElementById('sunrise')
-    // const sunset = document.getElementById('sunset')
-    // const moonrise = document.getElementById('moonrise')
-    // const moonset = document.getElementById('moonset')
+    const hour1_temp = document.getElementById('hour1-temp')
+    const date1 = document.getElementById('date1')
+    const icon1 = document.getElementById('icon1')
+    const hour1_condition = document.getElementById('hour1-condition')
+    const hour1_rain = document.getElementById("hour1-rain")
+    const hour1_humidity = document.getElementById("hour1-humidity")
+    const hour1_wind_speed = document.getElementById("hour1-wind-speed")
+    const hour1_wind_dir = document.getElementById("hour1-wind-dir")
 
+    hour1_temp.innerHTML=(`${forecast.hour[index + 1].temp_c}&#8451;`)
+    hour1_rain.textContent=`Chance of rain: ${forecast.hour[index + 1].chance_of_rain}%`
+    hour1_condition.textContent=`${forecast.hour[index + 1].condition.text}`
+    hour1_humidity.textContent=`Humidity: ${forecast.hour[index + 1].humidity}%`
+    hour1_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 1].wind_dir}`
+    hour1_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`
+    icon1.style.backgroundImage=`url(${forecast.hour[index + 1].condition.icon})`
+    date1.textContent=`${day+1}/${month}`
 
+    // hour2
+    const hour2_temp = document.getElementById('hour2-temp')
+    const date2 = document.getElementById('date2')
+    const icon2 = document.getElementById('icon2')
+    const hour2_condition = document.getElementById('hour2-condition')
+    const hour2_rain = document.getElementById("hour2-rain")
+    const hour2_humidity = document.getElementById("hour2-humidity")
+    const hour2_wind_speed = document.getElementById("hour2-wind-speed")
+    const hour2_wind_dir = document.getElementById("hour2-wind-dir")
 
+    hour2_temp.innerHTML=(`${forecast.hour[index + 2].temp_c}&#8451;`)
+    hour2_rain.textContent=`Chance of rain: ${forecast.hour[index +2].chance_of_rain}%`
+    hour2_humidity.textContent=`Humidity: ${forecast.hour[index + 2].humidity}%`
+    hour2_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 2].wind_dir}`
+    hour2_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 2].wind_kph}Kph`
+    icon2.style.backgroundImage=`url(${forecast.hour[index + 2].condition.icon})`
+    date2.textContent=`${day+2}/${month}`
+    hour2_condition.textContent=`${forecast.hour[index + 2].condition.text}`
+
+    // hour3
+    const hour3_temp = document.getElementById('hour3-temp')
+    const date3 = document.getElementById('date3')
+    const icon3 = document.getElementById('icon3')
+    const hour3_condition = document.getElementById('hour3-condition')
+    const hour3_rain = document.getElementById("hour3-rain")
+    const hour3_humidity = document.getElementById("hour3-humidity")
+    const hour3_wind_speed = document.getElementById("hour3-wind-speed")
+    const hour3_wind_dir = document.getElementById("hour3-wind-dir")
+
+    hour3_temp.innerHTML=(`${forecast.hour[index + 3].temp_c}&#8451;`)
+    hour3_rain.textContent=`Chance of rain: ${forecast.hour[index + 3].chance_of_rain}%`
+    hour3_humidity.textContent=`Humidity: ${forecast.hour[index + 3].humidity}%`
+    hour3_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 3].wind_dir}`
+    hour3_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 3].wind_kph}Kph`
+    icon3.style.backgroundImage=`url(${forecast.hour[index + 3].condition.icon})`
+    date3.textContent=`${day+3}/${month}`
+    hour3_condition.textContent=`${forecast.hour[index + 3].condition.text}`
 }
 
 apiCall()
