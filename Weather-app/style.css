@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: white;
 }
 
 #root {
@@ -14,9 +17,11 @@
     background-repeat: no-repeat;
     display: grid;
     grid-template: 1fr 1fr / 1fr;
-    gap: 2rem;
+    /* gap: 2rem; */
+    font-family: 'Ubuntu', sans-serif;/
 }
 
+/** basic layout setup  */
 #top {
     display: grid;
     grid-template: 1fr/3fr 2fr;
@@ -30,8 +35,9 @@
 }
 
 #current {
+    margin: 1rem;
     display: grid;
-    grid-template: 3fr 1fr 1fr/1fr;
+    grid-template: 2fr 1fr 1fr/1fr;
     /* frost effect */
     border-radius: 10px;
     backdrop-filter: blur(5px);
@@ -41,9 +47,10 @@
 }
 
 #info {
+    margin: 1rem;
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
-     /* frost effect */
+    /* frost effect */
     border-radius: 10px;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.226);
@@ -56,7 +63,7 @@
     margin: 1rem;
     display: grid;
     grid-template: 1fr 2fr 2fr / 1fr 1fr;
-     /* frost effect */
+    /* frost effect */
     border-radius: 10px;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.226);
@@ -67,42 +74,56 @@
 #hours {
     display: grid;
     grid-template: 1fr/ 1fr 1fr 1fr;
-   
+
 }
 
 #hours>div {
     margin: 1rem;
-      /* frost effect */
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-      background-color: rgba(255, 255, 255, 0.226);
-      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.342);
+    /* frost effect */
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.226);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.342);
 }
 
+/** basic layout setup  */
 
 
+/** current style */
+#current-top {
+    display: grid;
+    grid-template: 1fr/ 2fr 1fr 1fr;
+}
 
+#icon {
+    padding: 2.3rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-
-
-/* #temps{
+#temp {
     display: grid;
     font-size: 7rem;
     color: white;
-    padding: 0 0 0 3rem ;
-    align-items: center;
+    padding: 0 0 0 3rem;
+    align-items: end;
 }
 
-#info{
-    align-items: center;
+#location {
+    display: grid;
+    font-size: 2.5rem;
     color: white;
-    display: grid;
-    grid-template: 1fr 1fr / 1fr;
-    font-size: 3rem;
+    padding: 0 0 1rem 0;
+    align-items: end;
 }
-#info>div{
+
+#current-mid, #current-bottom{
+    padding: 0 0 0 3rem;
     display: grid;
-    justify-content: end;
-    padding:1.7rem
-} */
+    font-size: 2rem;
+    align-items: start;
+}
+
+/** current style */

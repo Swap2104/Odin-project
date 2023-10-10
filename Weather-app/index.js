@@ -71,7 +71,7 @@ async function apiCall() {
             index = i
         }
     }
-    
+
     //* printing out data from the Hours obj
     console.log(`\nHour: ${full_time}`)
     console.log(`Chance of rain: ${forecast.hour[index].chance_of_rain}%`)
@@ -96,12 +96,16 @@ async function apiCall() {
 
 
 
-    // const temps = document.getElementById('temps')
-    // const condition = document.getElementById('condition')
-    // const feel = document.getElementById('feel')
-    // temps.textContent = `${data.temp_c}C`
-    // condition.textContent = `${data.condition.text}`
-    // feel.textContent = `Feels like ${data.feelslike_c}C`
+    const icon = document.getElementById('icon')
+    const temps = document.getElementById('temp')
+    const location_display = document.getElementById('location')
+    const condition = document.getElementById('current-mid')
+    const feels = document.getElementById('current-bottom')
+    condition.textContent = `${data.condition.text}`
+    feels.innerHTML=`Feels like: ${data.feelslike_c}&#8451;`
+    icon.style.backgroundImage = `url(${data.condition.icon})`
+    temps.innerHTML = `${data.temp_c}&#8451;`
+    location_display.textContent = `${location.name},${location.country}`
 
 
 }
