@@ -185,7 +185,7 @@ async function apiCall() {
     hour1_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 1].wind_dir}`
     hour1_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`
     icon1.style.backgroundImage=`url(${forecast.hour[index + 1].condition.icon})`
-    date1.textContent=`${day+1}/${month}`
+    date1.textContent=`${date.getHours()+1}:00`
 
     // hour2
     const hour2_temp = document.getElementById('hour2-temp')
@@ -203,7 +203,7 @@ async function apiCall() {
     hour2_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 2].wind_dir}`
     hour2_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 2].wind_kph}Kph`
     icon2.style.backgroundImage=`url(${forecast.hour[index + 2].condition.icon})`
-    date2.textContent=`${day+2}/${month}`
+    date2.textContent=`${date.getHours()+2}:00`
     hour2_condition.textContent=`${forecast.hour[index + 2].condition.text}`
 
     // hour3
@@ -222,7 +222,7 @@ async function apiCall() {
     hour3_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 3].wind_dir}`
     hour3_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 3].wind_kph}Kph`
     icon3.style.backgroundImage=`url(${forecast.hour[index + 3].condition.icon})`
-    date3.textContent=`${day+3}/${month}`
+    date3.textContent=`${date.getHours()+3}:00`
     hour3_condition.textContent=`${forecast.hour[index + 3].condition.text}`
 }
 
