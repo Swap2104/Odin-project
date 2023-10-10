@@ -30,8 +30,6 @@ async function apiCall() {
     // let full_time3=`${full_date} ${time3}`
 
 
-
-
     //* fetching the data
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6bab9aaf64ab4007b2f71805230910&q=goa&dt=${full_date}`, { mode: 'cors' })
     const response_json = await response.json()
@@ -54,69 +52,6 @@ async function apiCall() {
             index = i
         }
     }
-
-    //* Printing the data from the location obj
-    console.log("\nLocation")
-    console.log(`Location: ${location.name},${location.country}`)
-    console.log(`Date and time: ${location.localtime}`)
-    console.log(`Timezone: ${location.tz_id}`)
-
-    //* Printing out data from the weather obj
-    console.log("\nWeather")
-    console.log(`Temperature in Celsius: ${data.temp_c}C`)
-    console.log(`Conditions: ${data.condition.text}`)
-    console.log(`Conditions: ${data.condition.icon}`)
-    console.log(`Feels like: ${data.feelslike_c}C`)
-    console.log(`Humidity: ${data.humidity}%`)
-    console.log(`Wind speed: ${data.wind_kph}Kph`)
-    console.log(`Wind direction: ${data.wind_dir}`)
-    console.log(`UV: ${data.uv}`)
-    console.log(`Chance of rain: ${forecast.hour[index].chance_of_rain}%`)
-
-    //* printing out data from the forecast obj
-    console.log("\nForecast")
-    console.log(`Sunrise: ${forecast.astro.sunrise}`)
-    console.log(`Sunset: ${forecast.astro.sunset}`)
-    console.log(`Moonset: ${forecast.astro.moonset}`)
-    console.log(`Moonrise: ${forecast.astro.moonrise}`)
-    console.log(`Avg Temp: ${forecast.day.avgtemp_c}C`)
-    console.log(`Avg Humidity: ${forecast.day.avghumidity}%`)
-    console.log(`Chance of rain: ${forecast.day.daily_chance_of_rain}%`)
-
-
-
-    //* printing out data from the Hours obj
-
-    console.log(`\nHour: ${forecast.hour[index + 1].time}`)
-    console.log(`Temperature: ${forecast.hour[index + 1].temp_c}C`)
-    console.log(`Condition: ${forecast.hour[index + 1].condition.text}`)
-    console.log(`Condition: ${forecast.hour[index + 1].condition.icon}`)
-    console.log(`Chance of rain: ${forecast.hour[index + 1].chance_of_rain}%`)
-    console.log(`Humidity: ${forecast.hour[index + 1].humidity}%`)
-    console.log(`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`)
-    console.log(`Wind Direction: ${forecast.hour[index + 1].wind_dir}`)
-    console.log(`Condition: ${forecast.hour[index + 1].condition.icon}`)
-
-    console.log(`\nHour: ${forecast.hour[index + 2].time}`)
-    console.log(`Temperature: ${forecast.hour[index + 2].temp_c}C`)
-    console.log(`Condition: ${forecast.hour[index + 2].condition.text}`)
-    console.log(`Condition: ${forecast.hour[index + 2].condition.icon}`)
-    console.log(`Chance of rain: ${forecast.hour[index + 2].chance_of_rain}%`)
-    console.log(`Humidity: ${forecast.hour[index + 2].humidity}%`)
-    console.log(`Wind speed: ${forecast.hour[index + 2].wind_kph}Kph`)
-    console.log(`Wind Direction: ${forecast.hour[index +2].wind_dir}`)
-    console.log(`Condition: ${forecast.hour[index + 2].condition.icon}`)
-
-    console.log(`\nHour: ${forecast.hour[index + 3].time}`)
-    console.log(`Temperature: ${forecast.hour[index + 3].temp_c}C`)
-    console.log(`Condition: ${forecast.hour[index + 3].condition.text}`)
-    console.log(`Condition: ${forecast.hour[index + 3].condition.icon}`)
-    console.log(`Chance of rain: ${forecast.hour[index + 3].chance_of_rain}%`)
-    console.log(`Humidity: ${forecast.hour[index + 3].humidity}%`)
-    console.log(`Wind speed: ${forecast.hour[index + 3].wind_kph}Kph`)
-    console.log(`Wind Direction: ${forecast.hour[index + 3].wind_dir}`)
-    console.log(`Condition: ${forecast.hour[index + 3].condition.icon}`)
-
 
     //*current
     const temps = document.getElementById('temp')
