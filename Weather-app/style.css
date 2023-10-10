@@ -127,3 +127,12 @@
 }
 
 /** current style */
+
+/** info style */
+#info>div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+/** info style */
