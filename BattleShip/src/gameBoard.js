@@ -14,7 +14,7 @@ class gameBoard {
                 shipCo = "Miss"
             }
         }
-        console.log("shipStatus: " + shipCo)
+        // console.log("shipStatus: " + shipCo)
     }
 }
 

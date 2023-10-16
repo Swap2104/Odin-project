@@ -8,15 +8,19 @@ class Ship {
             this.isSunk = isSunk
         this.horizontal = horizontal
         this.startCo = startCo
-        if (horizontal) {
-            console.log(startCo[1])
-            this.endCo = [startCo[0], startCo[1]+length-1]
-        }else
-        {
-            console.log(startCo[0])
-            this.endCo = [startCo[0]+length-1, startCo[1]]
+        if (horizontal)
+            this.endCo = [startCo[0], startCo[1] + length - 1]
+        else
+            this.endCo = [startCo[0] + length - 1, startCo[1]]
+
+        this.position = [this.startCo]
+
+        for (let i = 1; i < length; i++) {
+            if (horizontal)
+                this.position.splice(i, 0, [startCo[0], startCo[1] + i]);
+            else
+                this.position.splice(i, 0, [startCo[0] + i, startCo[1]]);
         }
-        // this.position.push(startCo)
     }
 
     Sunk() {
@@ -47,6 +51,8 @@ function obj_arr_display() {
     console.log(obj_arr)
 }
 
+obj_arr_display()
+console.log(obj_arr[0].position)
 
 
 export default { Ship }
