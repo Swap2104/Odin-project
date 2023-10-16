@@ -1,6 +1,4 @@
 let obj_arr = []
-let carrier = 1, battleship = 1, submarine = 1, boat = 1
-// let shipNames = [carrier, battleship, submarine, boat]
 let shipNames = []
 class Ship {
     constructor(name, length, co_ordinates = [0][0], horizontal = true, noHits = 0, isSunk = false) {
@@ -29,7 +27,6 @@ class Ship {
         }
         return this.noHits
     }
-
 }
 
 obj_arr.push(new Ship("Battleship", 5, [2, 3], false, 4))
