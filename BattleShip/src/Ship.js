@@ -1,4 +1,7 @@
 let obj_arr = []
+let carrier = 1, battleship = 1, submarine = 1, boat = 1
+// let shipNames = [carrier, battleship, submarine, boat]
+let shipNames = []
 class Ship {
     constructor(name, length, co_ordinates = [0][0], horizontal = true, noHits = 0, isSunk = false) {
         this.name = name,
@@ -12,9 +15,11 @@ class Ship {
     Sunk() {
         this.isSunk = true
         const shipIndex = obj_arr.findIndex((ship) => ship.name === this.name);
+        shipNames.push(this.name)
         if (shipIndex !== -1) {
             obj_arr[shipIndex] = { ...obj_arr[shipIndex], isSunk: true };
         }
+        console.log(shipNames)
     }
 
     Hit() {
@@ -27,18 +32,16 @@ class Ship {
 
 }
 
-obj_arr.push(new Ship("battleship", 5, [2, 3], false))
-obj_arr.push(new Ship("carrier", 7, [2, 5], true, 6))
-obj_arr.push(new Ship("submarine", 3, [2, 7], false))
+obj_arr.push(new Ship("Battleship", 5, [2, 3], false, 4))
+obj_arr.push(new Ship("Carrier", 7, [2, 5], true, 6))
+obj_arr.push(new Ship("Submarine", 3, [2, 7], false, 2))
+obj_arr.push(new Ship("Boat", 2, [5, 3], false))
 
 function obj_arr_display() {
     console.log(obj_arr)
 }
 
-// obj_arr_display()
-// obj_arr[0].Hit()
-// obj_arr_display()
 
 
 export default { Ship }
-export { obj_arr }
+export { obj_arr, shipNames }
