@@ -26,11 +26,12 @@ class Ship {
     Sunk() {
         this.isSunk = true
         const shipIndex = obj_arr.findIndex((ship) => ship.name === this.name);
+        console.log(this.name+" Has Sunk")
         shipNames.push(this.name)
         if (shipIndex !== -1) {
             obj_arr[shipIndex] = { ...obj_arr[shipIndex], isSunk: true };
         }
-        console.log(shipNames)
+        // console.log(shipNames)
     }
 
     Hit() {
@@ -51,9 +52,7 @@ function obj_arr_display() {
     console.log(obj_arr)
 }
 
-obj_arr_display()
-console.log(obj_arr[0].position)
-
+// obj_arr_display()
 
 export default { Ship }
 export { obj_arr, shipNames, obj_arr_display }
