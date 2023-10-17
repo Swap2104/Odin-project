@@ -4,6 +4,9 @@ function ship_placement() {
     let content = document.getElementById('content')
     let placement = document.createElement('div')
     let ship = document.createElement('div')
+    let header = document.createElement('div')
+    let ship_header = document.createElement('div')
+    let placement_header = document.createElement('div')
     let selectedPlace = null
     let noClickBoat = 0
     let noClickSubmarine = 0
@@ -12,8 +15,16 @@ function ship_placement() {
 
     placement.id = "placement"
     ship.id = "ship"
+    header.id="header"
+    content.appendChild(header)
     content.appendChild(placement)
     content.appendChild(ship)
+    placement_header.textContent = "Place Your Ships"
+    ship_header.textContent = "Select Ships To Place"
+    // header.appendChild(placement_header.textContent="Place Your Ships")
+    // header.appendChild(ship_header.textContent="Select Ships To Place")
+    header.appendChild(placement_header)
+    header.appendChild(ship_header)
 
     //* creating grid
     for (let i = 0, j = 0; i < 100; i++) {
