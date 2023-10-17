@@ -7,21 +7,64 @@
 
 #content {
     background-color: rgb(30, 101, 163);
-    display: flex;
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
     align-content: center;
     justify-content: center;
-    flex-wrap: wrap;
     height: 100vh;
     width: 100%;
 }
 
 #placement {
+    margin: 3rem;
     display: grid;
     grid-template: repeat(10, 1fr)/ repeat(10, 1fr);
-    height: 75%;
-    width: 40%;
+    /* height: 75%; */
+    /* width: 40%; */
 }
 
-.div{
+.div {
     border: .1px solid black;
 }
+
+#ship {
+    margin: 3rem;
+    display: grid;
+    grid-template: 1fr/repeat(4, 1fr);
+    gap: 5rem;
+    padding: 5rem;
+    /* align-items: center; */
+}
+
+#boat {
+    display: grid;
+    grid-template: repeat(2, .2fr)/ 1fr;
+    align-self: center;
+}
+
+.boat, .battleship, .submarine, .carrier {
+    background-color: darkblue;
+    border: 1px solid white;
+    height: 4rem;
+    width: 100%;
+}
+
+#battleship {
+    display: grid;
+    grid-template: repeat(5, 1fr)/ 1fr;
+    align-self: center;
+}
+
+#submarine {
+    display: grid;
+    grid-template: repeat(3, 1fr)/ 1fr;
+    align-self: center;
+}
+
+#carrier {
+    display: grid;
+    grid-template: repeat(7, 1fr)/ 1fr;
+    align-self: center;
+}
+
+/* obj_arr.push(new Ship("Battleship", 5, [2, 3], false, 4)) obj_arr.push(new Ship("Carrier", 7, [2, 5], true)) obj_arr.push(new Ship("Submarine", 3, [2, 7], false, 2)) obj_arr.push(new Ship("Boat", 2, [5, 3], false)) */
