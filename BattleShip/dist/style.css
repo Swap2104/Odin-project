@@ -20,7 +20,6 @@
     grid-template: repeat(10, 1fr)/ repeat(10, 1fr);
     height: 75%;
     width: 40%;
-    /* border: 1px solid black; */
 }
 
 .div{
