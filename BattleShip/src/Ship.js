@@ -52,7 +52,7 @@ function obj_arr_display() {
     console.log(obj_arr)
 }
 
-// obj_arr_display()
+obj_arr_display()
 
 export default { Ship }
 export { obj_arr, shipNames, obj_arr_display }

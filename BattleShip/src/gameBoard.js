@@ -21,4 +21,6 @@ class gameBoard {
     }
 }
 
+let p =new gameBoard
+p.attack([5, 3])
 export default  gameBoard 
