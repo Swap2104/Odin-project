@@ -1,3 +1,4 @@
+let objects=[]
 function Ship(name, length, startCo = [0][0]) {
     this.name = name,
         this.length = length,
@@ -28,11 +29,13 @@ function Ship(name, length, startCo = [0][0]) {
     }
 }
 
-let boat = new Ship('boat', 2, [2, 4])
-let submarine = new Ship('submarine', 3, [2, 4])
-let battleship = new Ship('battleship', 5, [2, 4])
-let carrier = new Ship('carrier', 7, [2, 4])
+objects.push(new Ship('boat', 2, [2, 4]))
+objects.push( new Ship('submarine', 3, [2, 4]))
+objects.push( new Ship('battleship', 5, [2, 4]))
+objects.push( new Ship('carrier', 7, [2, 4]))
 
-console.log(boat)
-console.log(battleship)
-console.log(submarine)
+
+console.log(objects)
+
+
+exports= {Ship, objects}
