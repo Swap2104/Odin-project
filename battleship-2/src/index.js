@@ -1,6 +1,6 @@
 import { Ship } from "./Ship.js"
 import gameBoard from "./gameBoard.js"
-let horizontal = true
+let horizontal_dir = true
 let selected_ship = null
 let length = 0
 let e
@@ -24,11 +24,11 @@ let btn = document.getElementById('btn')
 btn.addEventListener('click', () => {
     if (btn.textContent === "Vertical") {
         btn.textContent = "Horizontal";
-        horizontal = true
+        horizontal_dir = true
 
     } else if (btn.textContent === "Horizontal") {
         btn.textContent = "Vertical";
-        horizontal = false
+        horizontal_dir = false
     }
 });
 
@@ -88,10 +88,20 @@ for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', () => {
         if (e == 0) if (selected_ship) {
             divs[i].style.backgroundColor = 'red'
-            for (let j = 1; j < length; j++) {
-                divs[i + j].style.backgroundColor = 'red'
+            console.log(horizontal_dir)
+            if (horizontal_dir) {
+                for (let j = 1; j < length; j++) {
+                    divs[i + j].style.backgroundColor = 'red'
+                }
+                e++
             }
-            e++
+
+            if (!horizontal_dir) {
+                for (let j = 0; j < length * 10; j += 10) {
+                    divs[i + j].style.backgroundColor = 'red';
+                }
+                e++;
+            }
         }
     })
 }
