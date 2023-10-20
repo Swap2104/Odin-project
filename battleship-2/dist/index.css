@@ -35,6 +35,27 @@
     padding: 2rem;
 }
 
+#options{
+    align-self:center ;
+    justify-self: center;
+    /* border: 2px solid black; */
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection{
+    border-radius: 10px;
+    border: 2px solid rgb(255, 0, 0);
+    width: fit-content;
+    height: fit-content;
+    padding: 1.5rem;
+    margin: .6rem;
+}
+
 #grid>div {
     border: 1px solid black;
     background-color: rgb(255, 223, 211);

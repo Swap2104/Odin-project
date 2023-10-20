@@ -19,3 +19,5 @@ result = player.attack([5, 6])
 
 if (result) console.log(result)
 else console.log("Miss")
+
+export default gameBoard 
