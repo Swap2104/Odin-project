@@ -29,13 +29,13 @@ function Ship(name, length, startCo = [0][0]) {
     }
 }
 
-objects.push(new Ship('boat', 2, [2, 4]))
-objects.push( new Ship('submarine', 3, [2, 4]))
-objects.push( new Ship('battleship', 5, [2, 4]))
-objects.push( new Ship('carrier', 7, [2, 4]))
+objects.push(new Ship('boat', 2, [5, 5]))
+objects.push( new Ship('submarine', 3, [1, 8]))
+objects.push( new Ship('battleship', 5, [3, 9]))
+objects.push( new Ship('carrier', 7, [5, 5]))
 
 
-console.log(objects)
+// console.log(objects)
 
 
-exports= {Ship, objects}
+export  {Ship, objects}
