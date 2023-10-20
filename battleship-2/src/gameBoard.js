@@ -1,5 +1,4 @@
 import { Ship, objects } from "./Ship.js";
-// import ob
 function gameBoard() {
     this.attack = (pos) => {
         for (let i = 0; i < objects.length; i++) {
@@ -15,7 +14,8 @@ function gameBoard() {
 }
 
 let player = new gameBoard
-let result = player.attack([1, 1])
+let result = player.attack([5, 5])
+result = player.attack([5, 6])
 
 if (result) console.log(result)
 else console.log("Miss")
