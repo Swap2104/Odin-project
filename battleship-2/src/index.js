@@ -88,6 +88,9 @@ for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', () => {
         if (e == 0) if (selected_ship) {
             divs[i].style.backgroundColor = 'red'
+            for (let j = 1; j < length; j++) {
+                divs[i + j].style.backgroundColor = 'red'
+            }
             e++
         }
     })
