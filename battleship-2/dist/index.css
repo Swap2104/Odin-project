@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#content {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template: 10% 90%/ 1fr;
+}
+
+#header {
+    background-color: rgb(219, 253, 253);
+}
+
+#PlayerGrid {
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+    background-color: blue;
+}
+
+#ships {
+    background-color: bisque;
+    display: grid;
+    grid-template: 10% 90%/ 1fr;
+}
+
+#grid {
+    display: grid;
+    grid-template: repeat(10, 10%)/ repeat(10, 10%);
+    background-color: rgb(224, 171, 234);
+    gap: .1rem;
+    padding: 2rem;
+}
+
+#grid>div {
+    border: 1px solid black;
+    background-color: rgb(255, 223, 211);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    margin: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn {
+    padding: .5rem;
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* cursor:pointer; */
+}
