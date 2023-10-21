@@ -13,6 +13,7 @@ function grid_creation() {
         let div = document.createElement('div')
         grid.appendChild(div)
         div.className = "div"
+        div.id = `${i}`
     }
 }
 grid_creation()
@@ -100,22 +101,22 @@ for (let i = 0; i < divs.length; i++) {
             divs[i].style.backgroundColor = 'red'
             console.log(horizontal_dir)
             if (horizontal_dir) {
+                objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 1; j < length; j++) {
                     divs[i + j].style.backgroundColor = 'red'
-                    objects.push(new Ship(selected_ship[0], selected_ship[1], i + j, horizontal_dir))
-                    console.log(objects)
                 }
                 e++
             }
-
             if (!horizontal_dir) {
+                objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 0; j < length * 10; j += 10) {
                     divs[i + j].style.backgroundColor = 'red';
-                    objects.push(new Ship(selected_ship[0], selected_ship[1], i + j, horizontal_dir))
                     console.log(objects)
                 }
                 e++;
             }
+            console.log(objects)
         }
+
     })
 }

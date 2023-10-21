@@ -5,18 +5,33 @@ function Ship(name, length, startCo, horizontal) {
     this.startCo = startCo
     this.horizontal = horizontal
     this.noHits = 0
-    this.isSunk
-    this.position = [this.startCo]
+    this.isSunk=false
+    this.position = []
     this.sunkShips = []
+    this.endCo = 0
 
+    if (this.horizontal) {
+        for (let i = 0; i < length; i++) {
+            this.endCo = startCo++
+            console.log(this.endCo)
+        }
+    } else {
+        this.endCo = this.startCo
+        for (let i = 1; i < length; i++) {
+            this.endCo += 10
+        }
+        console.log("end Co-ordinate:" + this.endCo)
+    }
 
-    if (this.horizontal) this.endCo = [startCo[0], startCo[1] + length - 1]
-    else this.endCo = [startCo[0] + length - 1, startCo[1]]
-
-
-    for (let i = 1; i < length; i++) {
-        if (this.horizontal) this.position.splice(i, 0, [startCo[0], startCo[1] + i]);
-        else this.position.splice(i, 0, [startCo[0] + i, startCo[1]]);
+    if (this.horizontal) {
+        for (var i = this.startCo; i <= this.endCo; i++) {
+            this.position.push(i);
+        }
+    }
+    if (!this.horizontal) {
+        for (var i = this.startCo; i <= this.endCo; i+=10) {
+            this.position.push(i);
+        }
     }
 
     let sunk = () => {
@@ -33,12 +48,4 @@ function Ship(name, length, startCo, horizontal) {
         return this.noHits
     }
 }
-
-// objects.push(new Ship('boat', 2, [5, 5]))
-// objects.push(new Ship('submarine', 3, [1, 8]))
-// objects.push(new Ship('battleship', 5, [3, 9]))
-// objects.push(new Ship('carrier', 7, [5, 5]))
-
-// console.log(objects)
-
 export { Ship, objects }
