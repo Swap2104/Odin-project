@@ -4,7 +4,7 @@ let horizontal_dir = true
 let selected_ship = null
 let length = 0
 let e
-
+let boat_count = 1, battleship_count = 1, submarine_count = 1, carrier_count = 1
 
 function grid_creation() {
     let grid = document.getElementById('grid')
@@ -38,49 +38,56 @@ let submarine = document.getElementById('submarine')
 let battleship = document.getElementById('battleship')
 let carrier = document.getElementById('carrier')
 
-
 boat.addEventListener('click', () => {
-    length = 2
-    boat.style.backgroundColor = 'red'
-    submarine.style.backgroundColor = ''
-    battleship.style.backgroundColor = ''
-    carrier.style.backgroundColor = ''
-    selected_ship = boat
-    e = 0
-
+    if (boat_count == 1) {
+        length = 2
+        boat.style.backgroundColor = 'red'
+        submarine.style.backgroundColor = ''
+        battleship.style.backgroundColor = ''
+        carrier.style.backgroundColor = ''
+        selected_ship = boat
+        e = 0
+        boat_count++
+    }
 })
 
 submarine.addEventListener('click', () => {
-    submarine.style.backgroundColor = 'red'
-    boat.style.backgroundColor = ''
-    battleship.style.backgroundColor = ''
-    carrier.style.backgroundColor = ''
-    length = 3
-    selected_ship = submarine
-    e = 0
-
+    if (submarine_count == 1) {
+        submarine.style.backgroundColor = 'red'
+        boat.style.backgroundColor = ''
+        battleship.style.backgroundColor = ''
+        carrier.style.backgroundColor = ''
+        length = 3
+        selected_ship = submarine
+        e = 0
+        submarine_count++
+    }
 })
 
 battleship.addEventListener('click', () => {
-    boat.style.backgroundColor = ''
-    submarine.style.backgroundColor = ''
-    battleship.style.backgroundColor = 'red'
-    carrier.style.backgroundColor = ''
-    length = 5
-    selected_ship = battleship
-    e = 0
-
+    if (battleship_count == 1) {
+        boat.style.backgroundColor = ''
+        submarine.style.backgroundColor = ''
+        battleship.style.backgroundColor = 'red'
+        carrier.style.backgroundColor = ''
+        length = 5
+        selected_ship = battleship
+        e = 0
+        battleship_count++
+    }
 })
 
 carrier.addEventListener('click', () => {
-    boat.style.backgroundColor = ''
-    submarine.style.backgroundColor = ''
-    battleship.style.backgroundColor = ''
-    carrier.style.backgroundColor = 'red'
-    length = 7
-    selected_ship = carrier
-    e = 0
-
+    if (carrier_count == 1) {
+        boat.style.backgroundColor = ''
+        submarine.style.backgroundColor = ''
+        battleship.style.backgroundColor = ''
+        carrier.style.backgroundColor = 'red'
+        length = 7
+        selected_ship = carrier
+        e = 0
+        carrier_count++
+    }
 })
 
 let divs = document.getElementsByClassName('div')
