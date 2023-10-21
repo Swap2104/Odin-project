@@ -1,3 +1,5 @@
+import { objects } from "./Ship.js"
+
 let player_grid = document.getElementById('player-grid')
 let comp_grid = document.getElementById('comp-grid')
 
@@ -9,3 +11,5 @@ for (let i = 0; i < 100; i++) {
     player_grid.appendChild(player_div)
     comp_grid.appendChild(comp_div)
 }
+
+

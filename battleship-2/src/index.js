@@ -99,7 +99,6 @@ for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', () => {
         if (e == 0) if (selected_ship) {
             divs[i].style.backgroundColor = 'red'
-            console.log(horizontal_dir)
             if (horizontal_dir) {
                 objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 1; j < length; j++) {
@@ -111,11 +110,9 @@ for (let i = 0; i < divs.length; i++) {
                 objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 0; j < length * 10; j += 10) {
                     divs[i + j].style.backgroundColor = 'red';
-                    console.log(objects)
                 }
                 e++;
             }
-            console.log(objects)
         }
 
     })

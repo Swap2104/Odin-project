@@ -20,7 +20,6 @@ function Ship(name, length, startCo, horizontal) {
         for (let i = 1; i < length; i++) {
             this.endCo += 10
         }
-        console.log("end Co-ordinate:" + this.endCo)
     }
 
     if (this.horizontal) {

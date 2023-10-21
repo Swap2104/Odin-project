@@ -13,11 +13,11 @@ function gameBoard() {
     }
 }
 
-let player = new gameBoard
-let result = player.attack([5, 5])
-result = player.attack([5, 6])
+// let player = new gameBoard
+// let result = player.attack([5, 5])
+// result = player.attack([5, 6])
 
-if (result) console.log(result)
-else console.log("Miss")
+// if (result) console.log(result)
+// else console.log("Miss")
 
 export default gameBoard 
