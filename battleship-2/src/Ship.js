@@ -1,9 +1,9 @@
 let objects = []
-function Ship(name, length, startCo = [0][0]) {
+function Ship(name, length, startCo, horizontal) {
     this.name = name
     this.length = length
     this.startCo = startCo
-    this.horizontal = true
+    this.horizontal = horizontal
     this.noHits = 0
     this.isSunk
     this.position = [this.startCo]
@@ -34,10 +34,10 @@ function Ship(name, length, startCo = [0][0]) {
     }
 }
 
-objects.push(new Ship('boat', 2, [5, 5]))
-objects.push(new Ship('submarine', 3, [1, 8]))
-objects.push(new Ship('battleship', 5, [3, 9]))
-objects.push(new Ship('carrier', 7, [5, 5]))
+// objects.push(new Ship('boat', 2, [5, 5]))
+// objects.push(new Ship('submarine', 3, [1, 8]))
+// objects.push(new Ship('battleship', 5, [3, 9]))
+// objects.push(new Ship('carrier', 7, [5, 5]))
 
 // console.log(objects)
 

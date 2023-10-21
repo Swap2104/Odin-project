@@ -1,7 +1,7 @@
-import { Ship } from "./Ship.js"
+import { Ship, objects } from "./Ship.js"
 import gameBoard from "./gameBoard.js"
 let horizontal_dir = true
-let selected_ship = null
+let selected_ship = []
 let length = 0
 let e
 let boat_count = 1, battleship_count = 1, submarine_count = 1, carrier_count = 1
@@ -17,7 +17,6 @@ function grid_creation() {
 }
 grid_creation()
 
-console.log("hello")
 
 let btn = document.getElementById('btn')
 
@@ -45,7 +44,8 @@ boat.addEventListener('click', () => {
         submarine.style.backgroundColor = ''
         battleship.style.backgroundColor = ''
         carrier.style.backgroundColor = ''
-        selected_ship = boat
+        selected_ship[0] = " boat"
+        selected_ship[1] = length
         e = 0
         boat_count++
     }
@@ -58,7 +58,8 @@ submarine.addEventListener('click', () => {
         battleship.style.backgroundColor = ''
         carrier.style.backgroundColor = ''
         length = 3
-        selected_ship = submarine
+        selected_ship[0] = "submarine"
+        selected_ship[1] = length
         e = 0
         submarine_count++
     }
@@ -71,7 +72,8 @@ battleship.addEventListener('click', () => {
         battleship.style.backgroundColor = 'red'
         carrier.style.backgroundColor = ''
         length = 5
-        selected_ship = battleship
+        selected_ship[0] = "battleship"
+        selected_ship[1] = length
         e = 0
         battleship_count++
     }
@@ -84,7 +86,8 @@ carrier.addEventListener('click', () => {
         battleship.style.backgroundColor = ''
         carrier.style.backgroundColor = 'red'
         length = 7
-        selected_ship = carrier
+        selected_ship[0] = "carrier"
+        selected_ship[1] = length
         e = 0
         carrier_count++
     }
@@ -99,6 +102,8 @@ for (let i = 0; i < divs.length; i++) {
             if (horizontal_dir) {
                 for (let j = 1; j < length; j++) {
                     divs[i + j].style.backgroundColor = 'red'
+                    objects.push(new Ship(selected_ship[0], selected_ship[1], i + j, horizontal_dir))
+                    console.log(objects)
                 }
                 e++
             }
@@ -106,6 +111,8 @@ for (let i = 0; i < divs.length; i++) {
             if (!horizontal_dir) {
                 for (let j = 0; j < length * 10; j += 10) {
                     divs[i + j].style.backgroundColor = 'red';
+                    objects.push(new Ship(selected_ship[0], selected_ship[1], i + j, horizontal_dir))
+                    console.log(objects)
                 }
                 e++;
             }
