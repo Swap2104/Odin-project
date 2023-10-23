@@ -15,7 +15,6 @@ for (let i = 0; i < 100; i++) {
     comp_grid.appendChild(comp_div)
 }
 
-console.log(JSON.parse(localStorage.getItem("data")))
 let objects_arr = JSON.parse(localStorage.getItem("data"))
 let player_div_color = document.getElementsByClassName('player-div')
 
@@ -35,7 +34,6 @@ let player_div_color = document.getElementsByClassName('player-div')
                 //         }
                 //     }
                 // }
-                
                 
 //! 19 millisecond
 for (let i = 0; i < objects_arr.length; i++) {
