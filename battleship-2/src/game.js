@@ -23,14 +23,12 @@ let player_div_color = document.getElementsByClassName('player-div')
 // for (let k = 0; k < player_div_color.length; k++) {
     //     for (let i = 0; i < objects_arr.length; i++) {
         //         for (let j = 0; j < objects_arr[i].position.length; j++) {
-            
             //             console.log(Number(player_div_color[k].id))
             //             console.log(objects_arr[i].position[j])
             //             if (Number(player_div_color[k].id) == objects_arr[i].position[j]) {
                 //                 player_div_color[k].classList.add("ship")
                 //                 break
                 //             }
-                
                 //         }
                 //     }
                 // }

@@ -1,3 +1,5 @@
+import { Ship } from "./Ship.js"
+
 //? function to calculate attack co-ordinate by computer 
 function comp() {
     return Math.floor(Math.random() * 100)
@@ -5,29 +7,18 @@ function comp() {
 
 //? function to calculate computer's ship placement
 function compShipPlacement() {
-    let name = "boat"
-    let compOrientation = Math.floor(Math.random()) < 0.5
+    let comp_ship_array = []
     let compBoatCoOrdinates = Math.floor(Math.random() * 100)
-    console.log({ name, compBoatCoOrdinates, compOrientation })
+    comp_ship_array.push(new Ship("boat", 2, compBoatCoOrdinates, Math.floor(Math.random() * 2) < 0.5))
 
-    name = "Submarine"
     let compSubmarineCoOrdinates = Math.floor(Math.random() * 100)
-    compOrientation = Math.floor(Math.random()) < 0.5
-    console.log({ name, compSubmarineCoOrdinates, compOrientation })
+    comp_ship_array.push(new Ship("Submarine", 3, compSubmarineCoOrdinates, Math.floor(Math.random() * 2) < 0.5))
 
-    name = "Battleship"
     let compBattleshipCoOrdinates = Math.floor(Math.random() * 100)
-    compOrientation = Math.floor(Math.random()) < 0.5
-    console.log({ name, compBattleshipCoOrdinates, compOrientation })
-
+    comp_ship_array.push(new Ship("Battleship", 5, compBattleshipCoOrdinates, Math.floor(Math.random() * 2) < 0.5))
 
     let compCarrierCoOrdinates = Math.floor(Math.random() * 100)
-    compOrientation = Math.floor(Math.random()) < 0.5
-    name = "carrier"
-    console.log({ name, compCarrierCoOrdinates, compOrientation })
+    comp_ship_array.push(new Ship("Carrier", 7, compCarrierCoOrdinates, Math.floor(Math.random() * 2) < 0.5))
 }
 
-compShipPlacement()
-
-
-exports = comp
+exports = {comp, compShipPlacement}
