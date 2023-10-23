@@ -1,11 +1,11 @@
-let objects = []
+var objects = []
 function Ship(name, length, startCo, horizontal) {
     this.name = name
     this.length = length
     this.startCo = startCo
     this.horizontal = horizontal
     this.noHits = 0
-    this.isSunk=false
+    this.isSunk = false
     this.position = []
     this.sunkShips = []
     this.endCo = 0
@@ -13,7 +13,6 @@ function Ship(name, length, startCo, horizontal) {
     if (this.horizontal) {
         for (let i = 0; i < length; i++) {
             this.endCo = startCo++
-            console.log(this.endCo)
         }
     } else {
         this.endCo = this.startCo
@@ -28,7 +27,7 @@ function Ship(name, length, startCo, horizontal) {
         }
     }
     if (!this.horizontal) {
-        for (var i = this.startCo; i <= this.endCo; i+=10) {
+        for (var i = this.startCo; i <= this.endCo; i += 10) {
             this.position.push(i);
         }
     }

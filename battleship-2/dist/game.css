@@ -44,3 +44,7 @@
     display: grid;
     grid-template: repeat(10, 10%)/ repeat(10, 10%);
 }
+
+.ship {
+    background-color: blue;
+}

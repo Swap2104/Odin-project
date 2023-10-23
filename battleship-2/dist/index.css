@@ -36,7 +36,7 @@
     justify-self: center;
 }
 
-.finish-button {
+#finish-button {
     padding: .5rem;
     height: fit-content;
     width: fit-content;

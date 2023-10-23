@@ -18,7 +18,6 @@ function grid_creation() {
 }
 grid_creation()
 
-
 let btn = document.getElementById('btn')
 
 btn.addEventListener('click', () => {
@@ -31,7 +30,6 @@ btn.addEventListener('click', () => {
         horizontal_dir = false
     }
 });
-
 
 let boat = document.getElementById('boat')
 let submarine = document.getElementById('submarine')
@@ -92,6 +90,14 @@ carrier.addEventListener('click', () => {
         e = 0
         carrier_count++
     }
+})
+
+document.getElementById("finish-button").addEventListener('click', () => {
+    localStorage.setItem("data", JSON.stringify(objects))
+    console.log(objects)
+    console.log(JSON.stringify(objects))
+    console.log(JSON.parse(JSON.stringify(objects)))
+    window.location ="http://127.0.0.1:5500/Odin-project/battleship-2/dist/game.html"
 })
 
 let divs = document.getElementsByClassName('div')
