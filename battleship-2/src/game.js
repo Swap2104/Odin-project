@@ -1,6 +1,8 @@
 let start = Date.now();
 // import { objects } from "./index.js"
 import { objects } from "./Ship.js"
+import comp from "./computer.js";
+import { compShipPlacement } from "./computer.js";
 
 let player_grid = document.getElementById('player-grid')
 let comp_grid = document.getElementById('comp-grid')
@@ -41,6 +43,24 @@ for (let i = 0; i < objects_arr.length; i++) {
             //? console.log(Number(player_div_color[k].id))
             if (Number(player_div_color[k].id) == objects_arr[i].position[j]) {
                 player_div_color[k].classList.add("ship")
+                break
+            }
+        }
+    }
+}
+
+let computer=compShipPlacement()
+let comp_div_color = document.getElementsByClassName('comp-div')
+console.log(computer)
+
+
+for (let i = 0; i < computer.length; i++) {
+    for (let j = 0; j < computer[i].position.length; j++) {
+        //? console.log(computer[i].position[j])
+        for (let k = 0; k < player_div_color.length; k++) {
+        //     //? console.log(Number(comp_div_color[k].id))
+            if (Number(player_div_color[k].id) == computer[i].position[j]) {
+                comp_div_color[k].classList.add("ship")
                 break
             }
         }

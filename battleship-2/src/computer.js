@@ -19,6 +19,12 @@ function compShipPlacement() {
 
     let compCarrierCoOrdinates = Math.floor(Math.random() * 100)
     comp_ship_array.push(new Ship("Carrier", 7, compCarrierCoOrdinates, Math.floor(Math.random() * 2) < 0.5))
+
+    //! Temp
+    // console.log(comp_ship_array)
+
+    return comp_ship_array
 }
 
-exports = {comp, compShipPlacement}
+export default comp 
+export {compShipPlacement}
