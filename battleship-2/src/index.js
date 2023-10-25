@@ -1,5 +1,7 @@
 import { Ship, objects } from "./Ship.js"
 import gameBoard from "./gameBoard.js"
+import { obj1 } from "./compPlacement.js"
+
 let horizontal_dir = true
 let selected_ship = []
 let length = 0
@@ -35,6 +37,8 @@ let boat = document.getElementById('boat')
 let submarine = document.getElementById('submarine')
 let battleship = document.getElementById('battleship')
 let carrier = document.getElementById('carrier')
+
+//? event listeners for all the buttons 
 
 boat.addEventListener('click', () => {
     if (boat_count == 1) {
@@ -106,6 +110,7 @@ for (let i = 0; i < divs.length; i++) {
         if (e == 0) if (selected_ship) {
             divs[i].style.backgroundColor = 'red'
             if (horizontal_dir) {
+
                 objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 1; j < length; j++) {
                     divs[i + j].style.backgroundColor = 'red'
