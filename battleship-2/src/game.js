@@ -54,16 +54,16 @@ for (let i = 0; i < objects_arr.length; i++) {
 let random_index = Math.floor(Math.random() * ships.length); //? generating a random index to select a ship object
 const computer = JSON.parse(ships[random_index]) //?  selecting computer's ship placement object using the the random index
 // console.log(computer) //? Prints the computer's ship placement object 
-for (let i = 0; i < computer.length; i++) {
-    for (let j = 0; j < computer[i].position.length; j++) {
-        for (let k = 0; k < player_div_color.length; k++) {
-            if (Number(player_div_color[k].id) == computer[i].position[j]) {
-                comp_div_color[k].classList.add("comp-ship")
-                break
-            }
-        }
-    }
-}
+// for (let i = 0; i < computer.length; i++) {
+//     for (let j = 0; j < computer[i].position.length; j++) {
+//         for (let k = 0; k < player_div_color.length; k++) {
+//             if (Number(player_div_color[k].id) == computer[i].position[j]) {
+//                 comp_div_color[k].classList.add("comp-ship")
+//                 break
+//             }
+//         }
+//     }
+// }
 
 // ? Event listener for the user to attack
 let comp_grid_divs = document.getElementsByClassName('comp-div') //* re-selecting with a different name. 
