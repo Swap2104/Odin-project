@@ -48,14 +48,23 @@
 .ship {
     background-color: blue;
 }
+
 .comp-ship {
     background-color: blue;
 }
 
-.hit{
+.hit {
     background-color: rgb(255, 122, 122);
 }
 
-.miss{
+.miss {
     background-color: dimgray;
+}
+
+#comp-head,
+#player-head {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
 }

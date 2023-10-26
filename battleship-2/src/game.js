@@ -29,11 +29,12 @@ let player_div_color = document.getElementsByClassName('player-div')
 let comp_div_color = document.getElementsByClassName('comp-div')
 
 
+let comp_head = document.getElementById('comp-head')
+let player_head = document.getElementById('player-head')
+
 // !important
 // ? getting the users's ship object from the local storage.
 let objects_arr = JSON.parse(localStorage.getItem("data"))
-// let objects_arr = objects
-// console.log(objects)
 console.log(objects_arr)
 
 //! 19 millisecond
@@ -75,17 +76,17 @@ for (let x = 0; x < comp_grid_divs.length; x++) {
 
         let player_board = new gameBoard()
         let computer_board = new gameBoard()
-        // console.log(player_grid_divs[attackPos].id)
-        // console.log(attackPos)
 
         let player_result = computer_board.attack(comp_grid_divs[x].id, computer) //? player will attack on computer's board (uses computer's  object)
 
         if (player_result) {
             console.log(player_result)
+            player_head.textContent = "Hit"
             comp_grid_divs[x].classList.add('hit')
         }
 
         if (!player_result) {
+            player_head.textContent = "Miss"
             console.log("Player Missed")
             comp_grid_divs[x].classList.add('miss')
 
@@ -99,11 +100,13 @@ for (let x = 0; x < comp_grid_divs.length; x++) {
 
         let comp_result = player_board.attack(player_grid_divs[attackPos].id, objects_arr) //? computer will attack on player's board (uses user's ship object)
         if (comp_result != null) {
+            comp_head.textContent = "Hit"
             console.log(comp_result)
             player_grid_divs[attackPos].classList.add('hit')
         }
 
         if (!comp_result) {
+            comp_head.textContent = "Miss"
             console.log("Computer Missed")
             player_grid_divs[attackPos].classList.add('miss')
         }
