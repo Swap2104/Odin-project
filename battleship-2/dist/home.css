@@ -35,6 +35,10 @@
     justify-content: center;
 }
 
+#link{
+    z-index: 4;
+}
+
 #top>h1 {
     text-shadow: 0px 7px 4px #b5cdeb;
     font-size: 7rem;
@@ -42,7 +46,6 @@
 }
 
 #btn {
-    z-index: 4;
     text-align: center;
     width: 6rem;
     padding: 1.5rem;
