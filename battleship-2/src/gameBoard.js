@@ -15,6 +15,7 @@ function gameBoard() {
             for (let k = 0; k < objects[i].position.length; k++) {
                 if (JSON.stringify(objects[i].position[k]) === pos) {
                     hit(objects[i])
+                    // return 1
                     if (objects[0].isSunk == true && objects[1].isSunk == true && objects[2].isSunk == true && objects[3].isSunk == true) {
                         return 1
                     }

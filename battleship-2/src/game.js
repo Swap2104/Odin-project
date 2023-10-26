@@ -69,9 +69,13 @@ for (let i = 0; i < computer.length; i++) {
 let comp_grid_divs = document.getElementsByClassName('comp-div') //* re-selecting with a different name. 
 let player_grid_divs = document.getElementsByClassName('player-div') //* re-selecting with a different name. 
 let usedIndex = []
+let winner
+let storage=document.getElementById('hidden') 
+
 
 for (let x = 0; x < comp_grid_divs.length; x++) {
     comp_grid_divs[x].addEventListener('click', () => {
+
         let attackPos = 0
 
         let player_board = new gameBoard()
@@ -80,8 +84,8 @@ for (let x = 0; x < comp_grid_divs.length; x++) {
         let player_result = computer_board.attack(comp_grid_divs[x].id, computer) //? player will attack on computer's board (uses computer's  object)
 
         if (player_result == 1) {
-            
-            window.location = "http://127.0.0.1:5500/Odin-project/battleship-2/dist/result.html"
+            localStorage.setItem("winner", "You")
+            window.location = 'http://127.0.0.1:5500/Odin-project/battleship-2/dist/result.html'
         }
 
         if (player_result) {
@@ -105,8 +109,9 @@ for (let x = 0; x < comp_grid_divs.length; x++) {
 
         let comp_result = player_board.attack(player_grid_divs[attackPos].id, objects_arr) //? computer will attack on player's board (uses user's ship object)
 
-        if (comp_result==1) {
-            window.location ="http://127.0.0.1:5500/Odin-project/battleship-2/dist/result.html"
+        if (comp_result == 1) {
+            localStorage.setItem("winner", "Computer")
+            window.location = 'http://127.0.0.1:5500/Odin-project/battleship-2/dist/result.html'
         }
 
         if (comp_result != null) {
