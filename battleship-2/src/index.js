@@ -1,6 +1,4 @@
 import { Ship, objects } from "./Ship.js"
-import gameBoard from "./gameBoard.js"
-import { obj1 } from "./compPlacement.js"
 
 let horizontal_dir = true
 let selected_ship = []
@@ -8,6 +6,7 @@ let length = 0
 let e
 let boat_count = 1, battleship_count = 1, submarine_count = 1, carrier_count = 1
 
+// ? creating a grid of divs "10X10"
 function grid_creation() {
     let grid = document.getElementById('grid')
 
@@ -21,7 +20,12 @@ function grid_creation() {
 grid_creation()
 
 let btn = document.getElementById('btn')
+let boat = document.getElementById('boat')
+let submarine = document.getElementById('submarine')
+let battleship = document.getElementById('battleship')
+let carrier = document.getElementById('carrier')
 
+//? event listeners for all the buttons 
 btn.addEventListener('click', () => {
     if (btn.textContent === "Vertical") {
         btn.textContent = "Horizontal";
@@ -32,13 +36,6 @@ btn.addEventListener('click', () => {
         horizontal_dir = false
     }
 });
-
-let boat = document.getElementById('boat')
-let submarine = document.getElementById('submarine')
-let battleship = document.getElementById('battleship')
-let carrier = document.getElementById('carrier')
-
-//? event listeners for all the buttons 
 
 boat.addEventListener('click', () => {
     if (boat_count == 1) {
@@ -104,6 +101,8 @@ document.getElementById("finish-button").addEventListener('click', () => {
     window.location ="http://127.0.0.1:5500/Odin-project/battleship-2/dist/game.html"
 })
 
+
+// ? code to create ship object and display the ship for the user
 let divs = document.getElementsByClassName('div')
 for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', () => {
