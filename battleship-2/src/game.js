@@ -66,19 +66,48 @@ for (let i = 0; i < computer.length; i++) {
 
 // ? Event listener for the user to attack
 let comp_grid_divs = document.getElementsByClassName('comp-div') //* re-selecting with a different name. 
+let player_grid_divs = document.getElementsByClassName('player-div') //* re-selecting with a different name. 
+let usedIndex = []
+
 for (let x = 0; x < comp_grid_divs.length; x++) {
-    comp_grid_divs[x].addEventListener('click', (e) => {
-        console.log(comp_grid_divs[x])
-        let attackPos = Math.floor(Math.random() * 100)
-        console.log({attackPos})
+    comp_grid_divs[x].addEventListener('click', () => {
+        let attackPos = 0
 
         let player_board = new gameBoard()
         let computer_board = new gameBoard()
-        console.log(objects_arr)
-        console.log(computer)
+        // console.log(player_grid_divs[attackPos].id)
+        // console.log(attackPos)
 
-        console.log(player_board.attack(attackPos, objects_arr)) //? computer will attack on player's board (uses user's ship object)
-        console.log(computer_board.attack(comp_grid_divs[x].id, computer)) //? player will attack on computer's board (uses computer's  object)
+        let player_result = computer_board.attack(comp_grid_divs[x].id, computer) //? player will attack on computer's board (uses computer's  object)
+
+        if (player_result) {
+            console.log(player_result)
+            comp_grid_divs[x].classList.add('hit')
+        }
+
+        if (!player_result) {
+            console.log("Player Missed")
+            comp_grid_divs[x].classList.add('miss')
+
+        }
+
+        do {
+            attackPos = Math.floor(Math.random() * 100)
+        } while (usedIndex.indexOf(attackPos) != -1);
+        usedIndex.push(attackPos)
+        console.log(usedIndex)
+
+        let comp_result = player_board.attack(player_grid_divs[attackPos].id, objects_arr) //? computer will attack on player's board (uses user's ship object)
+        if (comp_result != null) {
+            console.log(comp_result)
+            player_grid_divs[attackPos].classList.add('hit')
+        }
+
+        if (!comp_result) {
+            console.log("Computer Missed")
+            player_grid_divs[attackPos].classList.add('miss')
+        }
+
     })
 }
 

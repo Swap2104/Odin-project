@@ -51,3 +51,11 @@
 .comp-ship {
     background-color: blue;
 }
+
+.hit{
+    background-color: rgb(255, 122, 122);
+}
+
+.miss{
+    background-color: dimgray;
+}

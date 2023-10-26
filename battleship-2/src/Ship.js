@@ -31,19 +31,19 @@ function Ship(name, length, startCo, horizontal) {
             this.position.push(i);
         }
     }
-
-    let sunk = () => {
-        console.log(`${this.name} has sunk`)
-        this.isSunk = true
-        this.sunkShips.push(this)
-        console.log(`Ships Destroyed: `)
-        console.log(this.sunkShips)
-    }
-
-    hit = () => {
-        this.noHits++
-        if (this.noHits >= this.length) sunk()
-        return this.noHits
-    }
 }
-export { Ship, objects }
+
+    let sunk = (ship) => {
+        console.log(`${ship.name} has sunk`)
+        ship.isSunk = true
+        ship.sunkShips.push(ship)
+        // console.log(`${} Destroyed: `)
+        // console.log(ship.sunkShips)
+    }
+
+    function hit(ship){
+        ship.noHits++
+        if (ship.noHits >= ship.length) sunk(ship)
+        return ship.noHits
+    }
+export { Ship, objects , hit}
