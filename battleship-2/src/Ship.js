@@ -1,4 +1,4 @@
-var objects=[]
+var objects = []
 function Ship(name, length, startCo, horizontal) {
     this.name = name
     this.length = length
@@ -7,7 +7,7 @@ function Ship(name, length, startCo, horizontal) {
     this.noHits = 0
     this.isSunk = false
     this.position = []
-    this.sunkShips = []
+    // this.sunkShips = []
     this.endCo = 0
 
     if (this.horizontal) {
@@ -33,17 +33,18 @@ function Ship(name, length, startCo, horizontal) {
     }
 }
 
-    let sunk = (ship) => {
-        console.log(`${ship.name} has sunk`)
-        ship.isSunk = true
-        ship.sunkShips.push(ship)
-        // console.log(`${} Destroyed: `)
-        // console.log(ship.sunkShips)
-    }
+let sunk = (ship) => {
+    console.log(`${ship.name} has sunk`)
+    ship.isSunk = true
+    // console.log(sunkShips)
+    return ship.name
+}
 
-    function hit(ship){
-        ship.noHits++
-        if (ship.noHits >= ship.length) sunk(ship)
-        return ship.noHits
+function hit(ship) {
+    ship.noHits++
+    if (ship.noHits >= ship.length) {
+        let sunkShip = sunk(ship)
+        return sunkShip
     }
-export { Ship, objects , hit}
+}
+export { Ship, objects, hit }
