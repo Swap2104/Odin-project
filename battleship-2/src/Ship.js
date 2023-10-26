@@ -1,4 +1,4 @@
-var objects = []
+var objects=[]
 function Ship(name, length, startCo, horizontal) {
     this.name = name
     this.length = length
@@ -40,7 +40,7 @@ function Ship(name, length, startCo, horizontal) {
         console.log(this.sunkShips)
     }
 
-    this.hit = () => {
+    hit = () => {
         this.noHits++
         if (this.noHits >= this.length) sunk()
         return this.noHits
