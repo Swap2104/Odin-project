@@ -1,10 +1,12 @@
-let start = Date.now();
+let start = Date.now();//! to measure the time took to execute the
+//? The objects that contain the ship placement for computer (stored in computerPlacement.js)
 import { obj1, obj2, obj3, obj4, obj5 } from "./compPlacement.js";
+let ships=[obj1, obj2, obj3, obj4, obj5] //? storing the objects in array to randomize selection.
 
-let player_grid = document.getElementById('player-grid')
-let comp_grid = document.getElementById('comp-grid')
-let ships=[obj1, obj2, obj3, obj4, obj5]
+let player_grid = document.getElementById('player-grid') //? div that contains the player grid
+let comp_grid = document.getElementById('comp-grid') //? div that contains the computer grid
 
+// ? inserting the grid elements in the computer's and the player's grid
 for (let i = 0; i < 100; i++) {
     let player_div = document.createElement('div')
     player_div.className = "player-div"
@@ -15,11 +17,17 @@ for (let i = 0; i < 100; i++) {
     comp_grid.appendChild(comp_div)
 }
 
-let objects_arr = JSON.parse(localStorage.getItem("data"))
+// ? selecting the div elements from the grid to display the ships 
 let player_div_color = document.getElementsByClassName('player-div')
+let comp_div_color = document.getElementsByClassName('comp-div')
 
+
+// !important
+// ? getting the users's ship object from the local storage.
+let objects_arr = JSON.parse(localStorage.getItem("data"))
 
 //! 19 millisecond
+//? display's the user's ship 
 for (let i = 0; i < objects_arr.length; i++) {
     for (let j = 0; j < objects_arr[i].position.length; j++) {
         for (let k = 0; k < player_div_color.length; k++) {
@@ -31,12 +39,9 @@ for (let i = 0; i < objects_arr.length; i++) {
     }
 }
 
-// ? the `compShipPlacement` function generates all the objects for the ship and returns an array of all the objects.
-
 //? this function displays computer's ship 
 let random_index = Math.floor(Math.random() * ships.length);
 let computer = JSON.parse(ships[random_index])
-let comp_div_color = document.getElementsByClassName('comp-div')
 console.log(computer)
     for (let i = 0; i < computer.length; i++) {
         for (let j = 0; j < computer[i].position.length; j++) {
@@ -49,5 +54,6 @@ console.log(computer)
         }
     }
 
+//! to measure the time took to execute the
 let timeTaken = Date.now() - start;
 console.log("Total time taken : " + timeTaken + " milliseconds");
