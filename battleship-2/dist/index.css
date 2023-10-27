@@ -1,3 +1,11 @@
+:root{
+    /* CSS HEX */
+    --silver: #B5B8BAff;
+    --yinmn-blue: #39516Dff;
+    --cool-gray: #8494ABff;
+    --charcoal: #2C3849ff;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 * {
@@ -82,7 +90,7 @@
     height: 70%;
     width: 80%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -90,10 +98,11 @@
 .selection {
     border-radius: 10px;
     border: 2px solid rgb(255, 0, 0);
-    width: fit-content;
+    width: 35%;
     height: fit-content;
     padding: 1.5rem;
     margin: .6rem;
+    text-align: center;
 }
 
 #grid>div {
