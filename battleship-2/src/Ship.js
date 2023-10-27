@@ -61,7 +61,7 @@ let sunk = (ship) => {
 /** 
  * @summary
  * The `hit()` function increments the number of hits of the ship being hit.
- * - If the number of hits is more then the length of the ship, the `sunk()` ${\n} function is called to sink the ship */
+ * - If the number of hits is more then the length of the ship, the `sunk()` function is called to sink the ship */
 function hit(ship) {
     ship.noHits++
     if (ship.noHits >= ship.length) {

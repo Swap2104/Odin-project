@@ -10,12 +10,12 @@ function gameBoard() {
      * The attack `method accepts a position from 0-99 to attack (default=0)` if it hits, the hit variable  of the ship is updated, and `${ShipName} is Hit` is returned.
      * If it's a miss it returns null */
     this.attack = (pos = 0, objects) => {
-        console.log(objects)
         for (let i = 0; i < objects.length; i++) {
             for (let k = 0; k < objects[i].position.length; k++) {
                 if (JSON.stringify(objects[i].position[k]) === pos) {
+                    // ? If the attack co-ordinate matches any of the ships position it calls the hit method
                     hit(objects[i])
-                    // return 1
+                    // ? If all the ships have sunk it returns `1`
                     if (objects[0].isSunk == true && objects[1].isSunk == true && objects[2].isSunk == true && objects[3].isSunk == true) {
                         return 1
                     }
@@ -23,6 +23,7 @@ function gameBoard() {
                 }
             }
         }
+        // ? If the attack co-ordinate does not match any of the ships position it calls the hit method
         return null
     }
 }
