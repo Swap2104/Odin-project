@@ -126,7 +126,7 @@ for (let x = 0; x < comp_grid_divs.length; x++) {
             player_grid_divs[attackPos].classList.add('miss')
         }
 
-    })
+    }, { once: true })
 }
 
 //! to measure the time took to execute the

@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
+:root {
+    /* CSS HEX */
+    --silver: #B5B8BAff;
+    --yinmn-blue: #39516Dff;
+    --cool-gray: #8494ABff;
+    --charcoal: #2C3849ff;
+    /* text-shadow: 0px 4px 3px black; */
+    font-weight: 50;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -11,8 +21,9 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     overflow-y: hidden;
+    color: var(--silver);
 }
 
 #hidden{
@@ -24,6 +35,7 @@
     width: 100%;
     display: grid;
     grid-template: 10% 90%/ 1fr;
+    background-color: var(--charcoal);
 }
 
 #main {
@@ -40,26 +52,27 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .player-div,
 .comp-div {
-    margin: 1px;
-    color: blue;
-    border: 1px solid black;
+    /* margin: 1px; */
+    border: 1px solid var(--cool-gray);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px -3px black;
 }
 
 #player-grid,
 #comp-grid {
     padding: 1rem;
+    gap: .3rem;
     /* border: 1px solid red; */
     display: grid;
-    grid-template: repeat(10, 10%)/ repeat(10, 10%);
+    grid-template: repeat(10, 9%)/ repeat(10, 9%);
 }
-
 .ship {
-    background-color: blue;
+    background-color: var(--silver);
 }
 
 .comp-ship {
@@ -71,7 +84,7 @@
 }
 
 .miss {
-    background-color: dimgray;
+    background-color: rgb(115, 117, 125);
 }
 
 #comp-head,
