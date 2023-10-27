@@ -1,5 +1,4 @@
-// import winner from './game.js'
-let div = document.getElementById('body')
-let storage=localStorage.getItem("winner")
-console.log('hello world')
+let div = document.getElementById('body') //? Selecting the div to display the winner.
+let storage=localStorage.getItem("winner") //? The winner's name is stored in the local storage.
 div.textContent=`${storage} Won`
+localStorage.removeItem('winner') //?Removing the winner's name from local storage
