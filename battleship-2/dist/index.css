@@ -1,14 +1,18 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+:root {
     /* CSS HEX */
     --silver: #B5B8BAff;
     --yinmn-blue: #39516Dff;
     --cool-gray: #8494ABff;
     --charcoal: #2C3849ff;
+    text-shadow: 0px 4px 3px black;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 * {
+    font-weight: 50;
+    color: var(--silver);
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -31,7 +35,7 @@
 #header {
     display: grid;
     grid-template: 1fr / 1fr 1fr;
-    background-color: rgb(219, 253, 253);
+    background-color: var(--yinmn-blue);
 }
 
 #header>div {
@@ -54,11 +58,14 @@
 }
 
 #finish-button {
-    padding: .5rem;
+    padding: 1rem;
+    margin-right: 20px;
     height: fit-content;
     width: fit-content;
-    border: 1px solid black;
+    border: 1px solid var(--cool-gray);
+    background-color: var(--charcoal);
     border-radius: 10px;
+    box-shadow: 2px 2px 8px -3px black;
     cursor: pointer;
 }
 
@@ -66,20 +73,21 @@
 #PlayerGrid {
     display: grid;
     grid-template: 1fr/ 1fr 1fr;
-    background-color: blue;
+    background-color: var(--charcoal);
 }
 
 #ships {
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     grid-template: 10% 90%/ 1fr;
 }
 
 #grid {
+    /* height: 100%; */
     display: grid;
-    grid-template: repeat(10, 10%)/ repeat(10, 10%);
-    background-color: rgb(224, 171, 234);
-    gap: .1rem;
+    grid-template: repeat(10, 9.5%)/ repeat(10, 9.5%);
+    /* background-color: rgb(224, 171, 234); */
+    gap: .3rem;
     padding: 2rem;
 }
 
@@ -97,17 +105,20 @@
 
 .selection {
     border-radius: 10px;
-    border: 2px solid rgb(255, 0, 0);
+    border: 2px solid var(--cool-gray);
     width: 35%;
     height: fit-content;
     padding: 1.5rem;
     margin: .6rem;
     text-align: center;
+    box-shadow: 2px 2px 8px -3px black;
+    text-shadow: 0px 1px 1px black;
 }
 
 #grid>div {
-    border: 1px solid black;
-    background-color: rgb(255, 223, 211);
+    box-shadow: 2px 2px 8px -3px black;
+    border: 1px solid var(--cool-gray);
+    background-color: transparent;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -121,10 +132,11 @@
 }
 
 #btn {
-    padding: .5rem;
+    padding: 2rem;
     height: fit-content;
     width: fit-content;
-    border: 1px solid black;
+    border: 2px solid var(--cool-gray);
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 2px 2px 8px -3px black;
 }

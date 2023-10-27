@@ -27,12 +27,12 @@ let carrier = document.getElementById('carrier')
 
 //? event listeners for all the buttons 
 btn.addEventListener('click', () => {
-    if (btn.textContent === "Vertical") {
-        btn.textContent = "Horizontal";
+    if (btn.textContent === 'Vertical ↓') {
+        btn.textContent = 'Horizontal →'
         horizontal_dir = true
 
-    } else if (btn.textContent === "Horizontal") {
-        btn.textContent = "Vertical";
+    } else if (btn.textContent === 'Horizontal →') {
+        btn.textContent = 'Vertical ↓'
         horizontal_dir = false
     }
 });
@@ -40,10 +40,14 @@ btn.addEventListener('click', () => {
 boat.addEventListener('click', () => {
     if (boat_count == 1) {
         length = 2
-        boat.style.backgroundColor = 'red'
+        boat.style.backgroundColor = '#B5B8BAff'
         submarine.style.backgroundColor = ''
         battleship.style.backgroundColor = ''
         carrier.style.backgroundColor = ''
+        boat.style.color = "#2C3849ff"
+        submarine.style.color = ""
+        battleship.style.color = ""
+        carrier.style.color = ""
         selected_ship[0] = " boat"
         selected_ship[1] = length
         e = 0
@@ -53,10 +57,14 @@ boat.addEventListener('click', () => {
 
 submarine.addEventListener('click', () => {
     if (submarine_count == 1) {
-        submarine.style.backgroundColor = 'red'
+        submarine.style.backgroundColor = '#B5B8BAff'
         boat.style.backgroundColor = ''
         battleship.style.backgroundColor = ''
         carrier.style.backgroundColor = ''
+        boat.style.color = ""
+        submarine.style.color = "#2C3849ff"
+        battleship.style.color = ""
+        carrier.style.color = ""
         length = 3
         selected_ship[0] = "submarine"
         selected_ship[1] = length
@@ -69,8 +77,12 @@ battleship.addEventListener('click', () => {
     if (battleship_count == 1) {
         boat.style.backgroundColor = ''
         submarine.style.backgroundColor = ''
-        battleship.style.backgroundColor = 'red'
+        battleship.style.backgroundColor = '#B5B8BAff'
         carrier.style.backgroundColor = ''
+        boat.style.color = ""
+        submarine.style.color = ""
+        battleship.style.color = "#2C3849ff"
+        carrier.style.color = ""
         length = 5
         selected_ship[0] = "battleship"
         selected_ship[1] = length
@@ -84,7 +96,11 @@ carrier.addEventListener('click', () => {
         boat.style.backgroundColor = ''
         submarine.style.backgroundColor = ''
         battleship.style.backgroundColor = ''
-        carrier.style.backgroundColor = 'red'
+        carrier.style.backgroundColor = '#B5B8BAff'
+        boat.style.color = ""
+        submarine.style.color = ""
+        battleship.style.color = ""
+        carrier.style.color = "#2C3849ff"
         length = 7
         selected_ship[0] = "carrier"
         selected_ship[1] = length
@@ -98,28 +114,29 @@ document.getElementById("finish-button").addEventListener('click', () => {
     console.log(objects)
     console.log(JSON.stringify(objects))
     console.log(JSON.parse(JSON.stringify(objects)))
-    window.location ="http://127.0.0.1:5500/Odin-project/battleship-2/dist/game.html"
+    window.location = "http://127.0.0.1:5500/Odin-project/battleship-2/dist/game.html"
 })
 
+let ship_color ='#B5B8BAff'
 
 // ? code to create ship object and display the ship for the user
 let divs = document.getElementsByClassName('div')
 for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', () => {
         if (e == 0) if (selected_ship) {
-            divs[i].style.backgroundColor = 'red'
+            divs[i].style.backgroundColor = ship_color
             if (horizontal_dir) {
 
                 objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 1; j < length; j++) {
-                    divs[i + j].style.backgroundColor = 'red'
+                    divs[i + j].style.backgroundColor = ship_color
                 }
                 e++
             }
             if (!horizontal_dir) {
                 objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
                 for (let j = 0; j < length * 10; j += 10) {
-                    divs[i + j].style.backgroundColor = 'red';
+                    divs[i + j].style.backgroundColor = ship_color;
                 }
                 e++;
             }
