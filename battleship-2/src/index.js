@@ -25,7 +25,7 @@ let submarine = document.getElementById('submarine')
 let battleship = document.getElementById('battleship')
 let carrier = document.getElementById('carrier')
 
-//? event listeners for all the buttons 
+//? event listeners for the button to select orientation
 btn.addEventListener('click', () => {
     if (btn.textContent === 'Vertical ↓') {
         btn.textContent = 'Horizontal →'
@@ -38,20 +38,24 @@ btn.addEventListener('click', () => {
 });
 
 boat.addEventListener('click', () => {
-    if (boat_count == 1) {
+    if (boat_count == 1) { //? checking the number of times the ship is placed. Must be equal to 1
         length = 2
+        //? setting the background colors of all the buttons.
         boat.style.backgroundColor = '#B5B8BAff'
         submarine.style.backgroundColor = ''
         battleship.style.backgroundColor = ''
         carrier.style.backgroundColor = ''
+        
+        //? setting the text colors of all the buttons.
         boat.style.color = "#2C3849ff"
         submarine.style.color = ""
         battleship.style.color = ""
         carrier.style.color = ""
-        selected_ship[0] = " boat"
+        
+        selected_ship[0] = " boat" //? name for the ship object
         selected_ship[1] = length
         e = 0
-        boat_count++
+        boat_count++ //? ensures that each ship is placed only once 
     }
 })
 
@@ -109,11 +113,9 @@ carrier.addEventListener('click', () => {
     }
 })
 
+// ? When the finish button is clicked the data is stored in the local storage and the game page (game.html) is loaded.
 document.getElementById("finish-button").addEventListener('click', () => {
     localStorage.setItem("data", JSON.stringify(objects))
-    console.log(objects)
-    console.log(JSON.stringify(objects))
-    console.log(JSON.parse(JSON.stringify(objects)))
     window.location = "http://127.0.0.1:5500/Odin-project/battleship-2/dist/game.html"
 })
 
@@ -121,26 +123,36 @@ let ship_color ='#B5B8BAff'
 
 // ? code to create ship object and display the ship for the user
 let divs = document.getElementsByClassName('div')
+
+// ? for loop adds event listeners to all the divs in the grid.
 for (let i = 0; i < divs.length; i++) {
     divs[i].addEventListener('click', () => {
+        // ? `e` is number of times a ship can be placed it must be 0 to place any ship.
+        // ? every time a ship is selected `e` is set to 0
+
         if (e == 0) if (selected_ship) {
             divs[i].style.backgroundColor = ship_color
-            if (horizontal_dir) {
+            // ? based on the orientation the ship are placed/ displayed, the orientation is also stored in the object.
+            // ? every time a ship is placed `e` is incremented
 
-                objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
+            if (horizontal_dir) {
+                objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir)) //? the data is stored in the object and 
+                // ? setting colors all the divs occupied by the ship
+                // ? if the ship is horizontal the co-ordinates and incremented by 1
                 for (let j = 1; j < length; j++) {
                     divs[i + j].style.backgroundColor = ship_color
                 }
                 e++
             }
+
             if (!horizontal_dir) {
                 objects.push(new Ship(selected_ship[0], selected_ship[1], Number(divs[i].id), horizontal_dir))
+                // ? if the ship is vertical the co-ordinates and incremented by 10
                 for (let j = 0; j < length * 10; j += 10) {
                     divs[i + j].style.backgroundColor = ship_color;
                 }
                 e++;
             }
         }
-
     })
 }
