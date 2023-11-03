@@ -30,15 +30,18 @@ nav>div{
 }
 
 #main-div{
+    height: 90%;
+    width: 97%;
+    align-self: center;
     display: grid;
-    flex-direction: row;
+    grid-template: 1fr/ 25% 75%;
     align-items: center;
     justify-content: center;
     background-color: rgb(22, 22, 22);
+    border-radius: 20px;
 }
 
 .img{
-    /* margin: 1.5rem; */
     aspect-ratio: 16/9;
     height: 50%;
     background-image: url("../pascal-debrunner-csQ3Bad5b8M-unsplash.jpg");
@@ -47,11 +50,11 @@ nav>div{
     background-size: cover;
     position: relative;
     left: -300px;
+    border-radius: 20px;
 }
 
 .para{
-    padding: 1.2rem;
-    height: 100%;
+    padding: 0 2rem 0 2rem;
     justify-self: center;
     text-align: center;
 }
