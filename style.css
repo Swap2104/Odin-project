@@ -27,34 +27,24 @@ nav>div{
     height: 90vh;
     display: grid;
     grid-template: 1fr / 20% 80%;
-}
-
-#main-div{
-    height: 90%;
-    width: 97%;
-    align-self: center;
+    padding: 1.5rem;
     display: grid;
-    grid-template: 1fr/ 25% 75%;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(22, 22, 22);
-    border-radius: 20px;
+    grid-template: 1fr/1fr;
 }
 
-.img{
-    aspect-ratio: 16/9;
-    height: 50%;
-    background-image: url("A_definition_Disney_style_poster_for_web_develop.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    left: -300px;
-    border-radius: 20px;
+.index>div{
+    border-radius: 10px;
+    background-color: rgb(27, 27, 27);
+    display: grid;
+    grid-template: 1fr/70% 30%;
 }
 
-.para{
-    padding: 0 2rem 0 2rem;
-    justify-self: center;
-    text-align: center;
+#Head{
+    /* border: 2px solid white; */
+    align-self: center;
+    padding: 10rem;
+}
+
+#Head>h1{
+    font-size: 6rem;
 }
