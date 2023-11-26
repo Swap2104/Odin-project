@@ -1,5 +1,8 @@
 console.log("hello")
-JSON_var = `[
+import { Navbar } from "./navabar.js"
+Navbar()
+
+let JSON_var = `[
     {
         "name": "Restaurant",
         "Desc":"This is my restaurant page project built using webpack"
@@ -10,7 +13,7 @@ JSON_var = `[
     }
 ]`
 
-JSON_var2 = `[
+let JSON_var2 = `[
     {
         "name": "Restaurant",
         "Desc":"This is my restaurant page project built using webpack"
@@ -21,7 +24,7 @@ JSON_var2 = `[
     }
 ]`
 
-JSON_var3 = `[
+let JSON_var3 = `[
     {
         "name": "Restaurant",
         "Desc":"This is my restaurant page project built using webpack"
