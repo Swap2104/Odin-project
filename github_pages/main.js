@@ -11,7 +11,6 @@ Navbar()
 let img = document.getElementsByClassName('img')
 let img_id = document.getElementById('img-id')
 
-
 const project_0 = document.getElementById('project0')
 const project_1 = document.getElementById('project1')
 const project_2 = document.getElementById('project2')
