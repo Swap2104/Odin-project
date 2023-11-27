@@ -1,8 +1,14 @@
+@font-face {
+    font-family: FiraCodeNerdFont;
+    src: url(/fonts/FiraCodeNerdFontPropo-Light.ttf)
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
+    font-family: FiraCodeNerdFont;
 }
 
 nav {
@@ -67,11 +73,32 @@ nav>div {
     background-color: rgb(27, 27, 27);
     /* gap: 2rem; */
     /*! alert: Might have to remove this later */
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #recent_projects>div {
     border-radius: 10px;
     margin: 2rem;
     background-color: rgb(36, 36, 36);
+
+    display: grid;
+    /* grid-template: 2fr 2fr 1fr/ 1fr; */
+    grid-template: 35% 45% 20%/ 1fr;
+}
+
+.heading,
+.para {
+    font-size: 2.5rem;
+    padding: 1.5rem 1.5rem 0;
+}
+
+.para {
+    font-size: 1.3rem;
+}
+
+.para~a {
+    align-self: center;
+    justify-self: self-end;
+    padding: 10px 10px 10px 10px ;
+    font-size: 1.3rem;
 }
