@@ -6,9 +6,9 @@ export function Navbar(){
 
     const body= document.getElementsByTagName('body')[0]
     const nav=document.createElement('nav')
-    const home=document.createElement('div')
-    const project=document.createElement('div')
-    const about=document.createElement('div')
+    const home=document.createElement('a')
+    const project=document.createElement('a')
+    const about=document.createElement('a')
 
     home.id="home"
     project.id="project"
@@ -17,6 +17,12 @@ export function Navbar(){
     home.textContent = "Home"
     project.textContent = "Projects"
     about.textContent = "About"
+
+    home.setAttribute("href", "index.html")
+    project.setAttribute("href", "#")
+    about.setAttribute("href", "#")
+
+    
 
     body.prepend(nav)
     nav.appendChild(home)

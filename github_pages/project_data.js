@@ -72,7 +72,7 @@ export const Restaurant = {
 }
 
 export const battleship = {
-    name: "Library",
+    name: "Battleship",
     desc: "Battleship game, which allows the user to play battleship in their browser",
     img: "../battleship-2/thumbnail.png"
 }

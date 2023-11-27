@@ -8,12 +8,7 @@ import { data } from "./project_data.js"
 
 Navbar()
 
-
-const project_0 = document.getElementById('project0')
-const project_1 = document.getElementById('project1')
-const project_2 = document.getElementById('project2')
-const project_3 = document.getElementById('project3')
-
+console.log(data)
 
 const head=document.getElementsByClassName('heading')
 const para=document.getElementsByClassName('para')
@@ -27,4 +22,3 @@ para[0].textContent=data.TicTacToe.desc
 para[1].textContent=data.Weather_app.desc
 para[2].textContent=data.Restaurant.desc
 para[3].textContent=data.battleship.desc
-

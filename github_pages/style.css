@@ -23,8 +23,9 @@ nav {
     padding: 0 5rem 0 5rem;
 }
 
-nav>div {
+nav>* {
     text-align: center;
+    text-decoration: none;
 }
 
 .index {
@@ -88,17 +89,18 @@ nav>div {
 
 .heading,
 .para {
-    font-size: 2.5rem;
-    padding: 1.5rem 1.5rem 0;
+    font-size: 2rem;
+    padding: 1.5rem;
 }
 
 .para {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .para~a {
     align-self: center;
     justify-self: self-end;
-    padding: 10px 10px 10px 10px ;
+    /* padding: 10px 10px 10px 10px ; */
+    padding: 20px;
     font-size: 1.3rem;
 }
