@@ -19,7 +19,7 @@ export function Navbar(){
     about.textContent = "About"
 
     body.prepend(nav)
-    nav.appendChild(about)
-    nav.appendChild(project)
     nav.appendChild(home)
+    nav.appendChild(project)
+    nav.appendChild(about)
 }
