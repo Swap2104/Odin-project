@@ -2,8 +2,8 @@
 - client side js cannot access file/dirs
 - move this to node js later 
 - [x] function to construct header
-- [ ] JSON that will store the name, description and the image of all the projects to be shown
-- [ ] Recent projects section under home
+- [x] JSON that will store the name, description and the image of all the projects to be shown
+- [x] Recent projects section under home
 - [ ] simple grid with project divs for project page
 - [ ] Each div will have simple description and image and the name of the project
 
