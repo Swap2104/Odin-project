@@ -1,5 +1,6 @@
-// ! Format
-//? export const project_dir_name= {
+// ! How to add a new project:
+// ! add project details at the end of the data array in the following format
+//? {
 //? name:"name of the project",
 //? desc:"Short description of the project",
 //? Img:"path to the project thumbnail"
