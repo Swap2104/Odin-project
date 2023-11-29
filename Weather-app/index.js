@@ -1,13 +1,12 @@
 //* 6bab9aaf64ab4007b2f71805230910
-let search_val="goa"
-function search(){
-    let input=document.getElementById('search')
-    search_val=input.value
+let search_val = "London"
+function search() {
+    let input = document.getElementById('search')
+    search_val = input.value
     console.log(search_val)
     apiCall()
 }
 async function apiCall() {
-
 
     //* calculating dates
     const date = new Date();
@@ -16,7 +15,6 @@ async function apiCall() {
     let day = date.getDate()
     //* let formatted_date=`${day}/${month}`
     let full_date = `${year}-${month}-${day}`
-    // console.log(full_date);
 
     //* current time
     let current_time = `${date.getHours()}:${date.getMinutes()}`
@@ -27,15 +25,9 @@ async function apiCall() {
     let time = `${date.getHours()}:00`
     let time2 = `${date.getHours() + 1}:00`
     let time3 = `${date.getHours() + 2}:00`
-    // console.log(time);
-    // console.log(time2);
-    // console.log(time3);
 
     //* combining the date and the time
     let full_time = `${full_date} ${time}`
-    // let full_time2=`${full_date} ${time2}`
-    // let full_time3=`${full_date} ${time3}`
-
 
     //* fetching the data
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6bab9aaf64ab4007b2f71805230910&q=${search_val}&dt=${full_date}`, { mode: 'cors' })
@@ -120,14 +112,14 @@ async function apiCall() {
     const hour1_wind_speed = document.getElementById("hour1-wind-speed")
     const hour1_wind_dir = document.getElementById("hour1-wind-dir")
 
-    hour1_temp.innerHTML=(`${forecast.hour[index + 1].temp_c}&#8451;`)
-    hour1_rain.textContent=`Chance of rain: ${forecast.hour[index + 1].chance_of_rain}%`
-    hour1_condition.textContent=`${forecast.hour[index + 1].condition.text}`
-    hour1_humidity.textContent=`Humidity: ${forecast.hour[index + 1].humidity}%`
-    hour1_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 1].wind_dir}`
-    hour1_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`
-    icon1.style.backgroundImage=`url(${forecast.hour[index + 1].condition.icon})`
-    date1.textContent=`${date.getHours()+1}:00`
+    hour1_temp.innerHTML = (`${forecast.hour[index + 1].temp_c}&#8451;`)
+    hour1_rain.textContent = `Chance of rain: ${forecast.hour[index + 1].chance_of_rain}%`
+    hour1_condition.textContent = `${forecast.hour[index + 1].condition.text}`
+    hour1_humidity.textContent = `Humidity: ${forecast.hour[index + 1].humidity}%`
+    hour1_wind_dir.textContent = `Wind Direction: ${forecast.hour[index + 1].wind_dir}`
+    hour1_wind_speed.textContent = `Wind speed: ${forecast.hour[index + 1].wind_kph}Kph`
+    icon1.style.backgroundImage = `url(${forecast.hour[index + 1].condition.icon})`
+    date1.textContent = `${date.getHours() + 1}:00`
 
     // hour2
     const hour2_temp = document.getElementById('hour2-temp')
@@ -139,14 +131,14 @@ async function apiCall() {
     const hour2_wind_speed = document.getElementById("hour2-wind-speed")
     const hour2_wind_dir = document.getElementById("hour2-wind-dir")
 
-    hour2_temp.innerHTML=(`${forecast.hour[index + 2].temp_c}&#8451;`)
-    hour2_rain.textContent=`Chance of rain: ${forecast.hour[index +2].chance_of_rain}%`
-    hour2_humidity.textContent=`Humidity: ${forecast.hour[index + 2].humidity}%`
-    hour2_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 2].wind_dir}`
-    hour2_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 2].wind_kph}Kph`
-    icon2.style.backgroundImage=`url(${forecast.hour[index + 2].condition.icon})`
-    date2.textContent=`${date.getHours()+2}:00`
-    hour2_condition.textContent=`${forecast.hour[index + 2].condition.text}`
+    hour2_temp.innerHTML = (`${forecast.hour[index + 2].temp_c}&#8451;`)
+    hour2_rain.textContent = `Chance of rain: ${forecast.hour[index + 2].chance_of_rain}%`
+    hour2_humidity.textContent = `Humidity: ${forecast.hour[index + 2].humidity}%`
+    hour2_wind_dir.textContent = `Wind Direction: ${forecast.hour[index + 2].wind_dir}`
+    hour2_wind_speed.textContent = `Wind speed: ${forecast.hour[index + 2].wind_kph}Kph`
+    icon2.style.backgroundImage = `url(${forecast.hour[index + 2].condition.icon})`
+    date2.textContent = `${date.getHours() + 2}:00`
+    hour2_condition.textContent = `${forecast.hour[index + 2].condition.text}`
 
     // hour3
     const hour3_temp = document.getElementById('hour3-temp')
@@ -158,14 +150,14 @@ async function apiCall() {
     const hour3_wind_speed = document.getElementById("hour3-wind-speed")
     const hour3_wind_dir = document.getElementById("hour3-wind-dir")
 
-    hour3_temp.innerHTML=(`${forecast.hour[index + 3].temp_c}&#8451;`)
-    hour3_rain.textContent=`Chance of rain: ${forecast.hour[index + 3].chance_of_rain}%`
-    hour3_humidity.textContent=`Humidity: ${forecast.hour[index + 3].humidity}%`
-    hour3_wind_dir.textContent=`Wind Direction: ${forecast.hour[index + 3].wind_dir}`
-    hour3_wind_speed.textContent=`Wind speed: ${forecast.hour[index + 3].wind_kph}Kph`
-    icon3.style.backgroundImage=`url(${forecast.hour[index + 3].condition.icon})`
-    date3.textContent=`${date.getHours()+3}:00`
-    hour3_condition.textContent=`${forecast.hour[index + 3].condition.text}`
+    hour3_temp.innerHTML = (`${forecast.hour[index + 3].temp_c}&#8451;`)
+    hour3_rain.textContent = `Chance of rain: ${forecast.hour[index + 3].chance_of_rain}%`
+    hour3_humidity.textContent = `Humidity: ${forecast.hour[index + 3].humidity}%`
+    hour3_wind_dir.textContent = `Wind Direction: ${forecast.hour[index + 3].wind_dir}`
+    hour3_wind_speed.textContent = `Wind speed: ${forecast.hour[index + 3].wind_kph}Kph`
+    icon3.style.backgroundImage = `url(${forecast.hour[index + 3].condition.icon})`
+    date3.textContent = `${date.getHours() + 3}:00`
+    hour3_condition.textContent = `${forecast.hour[index + 3].condition.text}`
 }
 
 apiCall()
