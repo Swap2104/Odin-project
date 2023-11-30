@@ -3,6 +3,13 @@
     src: url(../github_pages/fonts/FiraCodeNerdFontPropo-Light.ttf)
 }
 
+:root {
+    --fs-head-main: 6rem;
+    --fs--para: 1.5rem;
+    --fs-head: 2rem;
+    --fs-small: 1.3rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,13 +21,13 @@
 
 nav {
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     background-color: rgba(0, 0, 0, 0.774);
     color: white;
     display: grid;
     align-items: center;
     grid-template: 1fr / 1fr 1fr 1fr;
-    font-size: 1.2rem;
+    font-size: var(--fs-small);
     padding: 0 5rem 0 5rem;
 }
 
@@ -29,15 +36,18 @@ nav>* {
     text-decoration: none;
 }
 
-nav>a:hover{
-    transition: border-bottom 8s;
+nav>a:hover {
+    border-bottom: 2px solid white;
+}
+
+.active {
     border-bottom: 2px solid white;
 }
 
 .index {
     background-color: rgb(36, 36, 36);
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     display: grid;
     grid-template: 1fr / 20% 80%;
     padding: 1.5rem;
@@ -57,20 +67,32 @@ nav>a:hover{
     /* border: 2px solid white; */
     align-self: center;
     padding: 10rem;
+    min-width: fit-content;
+}
+
+@media screen and (max-width:800px) {
+    .index>div {
+        grid-template: 1fr/1fr;
+    }
+
+    #Head {
+        padding: 3rem;
+        min-width: 100%;
+    }
+}
+
+#Head>p {
+    min-width: fit-content;
+    font-size: var(--fs-small);
 }
 
 #Head>h1 {
-    font-size: 6rem;
-}
-
-.img {
-    height: 3rem;
-    width: 3rem;
-    background-size: contain;
-    /* background-size: 20rem; */
+    min-width: fit-content;
+    font-size: var(--fs-head-main);
 }
 
 #RP_head {
+    font-size: var(--fs-head);
     padding: 2rem 2rem 0rem 2rem;
     background-color: rgb(27, 27, 27);
 }
@@ -81,14 +103,6 @@ nav>a:hover{
     background-color: rgb(27, 27, 27);
     min-height: 90vh;
 }
-
-@media screen and (max-width:800px) {
-    #recent_projects {
-    grid-template: 1fr /1fr;
-    grid-auto-flow: row;
-    }
-}
-
 
 #recent_projects>div {
     border-radius: 10px;
@@ -102,20 +116,19 @@ nav>a:hover{
 .heading,
 .para {
     overflow: hidden;
-    font-size: 2rem;
+    font-size: var(--fs-head);
     padding: 1.5rem;
 }
 
 .para {
-    font-size: 1rem;
+    font-size: var(--fs-small);
 }
 
 .para~a {
     align-self: center;
     justify-self: self-end;
-    /* padding: 10px 10px 10px 10px ; */
     padding: 20px;
-    font-size: 1.3rem;
+    font-size: var(--fs-small);
 }
 
 .project-section {
@@ -127,14 +140,34 @@ nav>a:hover{
 #content {
     grid-template-columns: 50% 50%;
     display: grid;
-    /* gap: 2rem; */
     grid-auto-flow: row;
+    overflow: hidden;
 }
 
 #content>div {
+    overflow: hidden;
     margin: 2rem;
     border-radius: 10px;
     background-color: rgb(36, 36, 36);
     display: grid;
     grid-template: 35% 45% 20%/ 1fr;
+}
+
+@media screen and (max-width:800px) {
+
+    #recent_projects,
+    #content {
+        grid-template: 1fr /1fr;
+        grid-auto-flow: row;
+    }
+
+    :root {
+        --fs-head-main: 2.7rem;
+        --fs-head: 1.5rem;
+        --fs--para: 1rem;
+        --fs-small: 1.1rem;
+    }
+    nav{
+        padding:0 3rem 0 3rem;
+    }
 }
