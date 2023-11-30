@@ -141,9 +141,11 @@ nav>a:hover {
     grid-template-columns: 50% 50%;
     display: grid;
     grid-auto-flow: row;
+    overflow: hidden;
 }
 
 #content>div {
+    overflow: hidden;
     margin: 2rem;
     border-radius: 10px;
     background-color: rgb(36, 36, 36);
