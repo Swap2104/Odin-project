@@ -71,13 +71,13 @@ export const data = [
     {
         name: "Restaurant Page",
         desc: "Working Restaurant page built using webpack",
-        link: "Restaurant-webpack"
+        link: "Restaurant-webpack/dist"
     },
 
     {
         name: "Battleship",
         desc: "Battleship game, which allows the user to play battleship in their browser",
-        link: "battleship-2"
+        link: "battleship-2/dist/"
     }
 
 ]
