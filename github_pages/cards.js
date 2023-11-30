@@ -10,6 +10,7 @@ export function Cards() {
     para.classList.add("para")
     link.setAttribute("target", "_blank")
     link.textContent = ""
+    link.classList.add('link')
 
     content.appendChild(project)
     project.appendChild(heading)
