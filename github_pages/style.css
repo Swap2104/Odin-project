@@ -40,7 +40,7 @@ nav>a:hover {
     border-bottom: 2px solid white;
 }
 
-#active {
+.active {
     border-bottom: 2px solid white;
 }
 
@@ -165,6 +165,9 @@ nav>a:hover {
         --fs-head-main: 2.7rem;
         --fs-head: 1.5rem;
         --fs--para: 1rem;
-        --fs-small: 1rem;
+        --fs-small: 1.1rem;
+    }
+    nav{
+        padding:0 3rem 0 3rem;
     }
 }

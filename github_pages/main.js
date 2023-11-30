@@ -7,8 +7,12 @@ import { data } from "./project_data.js"
 //? drawing navbar on the screen
 
 Navbar()
-
-console.log(data)
+const nav_home = document.getElementById('home')
+const nav_project = document.getElementById('project')
+const nav_about = document.getElementById('about')
+nav_home.className="active"
+nav_about.className = ""
+nav_project.className = ''
 
 const head = document.getElementsByClassName('heading')
 const para = document.getElementsByClassName('para')
