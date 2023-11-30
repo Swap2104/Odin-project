@@ -82,14 +82,6 @@ nav>a:hover{
     min-height: 90vh;
 }
 
-@media screen and (max-width:800px) {
-    #recent_projects {
-    grid-template: 1fr /1fr;
-    grid-auto-flow: row;
-    }
-}
-
-
 #recent_projects>div {
     border-radius: 10px;
     margin: 2rem;
@@ -127,7 +119,6 @@ nav>a:hover{
 #content {
     grid-template-columns: 50% 50%;
     display: grid;
-    /* gap: 2rem; */
     grid-auto-flow: row;
 }
 
@@ -137,4 +128,11 @@ nav>a:hover{
     background-color: rgb(36, 36, 36);
     display: grid;
     grid-template: 35% 45% 20%/ 1fr;
+}
+
+@media screen and (max-width:800px) {
+    #recent_projects, #content {
+        grid-template: 1fr /1fr;
+        grid-auto-flow: row;
+    }
 }
