@@ -19,10 +19,8 @@ export function Navbar(){
     about.textContent = "About"
 
     home.setAttribute("href", "index.html")
-    project.setAttribute("href", "#")
+    project.setAttribute("href", "github_pages/project.html")
     about.setAttribute("href", "#")
-
-    
 
     body.prepend(nav)
     nav.appendChild(home)
