@@ -22,12 +22,12 @@ btn.addEventListener('click', (e) => {
     } else {
         if (pass.value === confirmPass.value) {
             confirmPass.className = 'input-confirm-password';
-            window.location.href="http://127.0.0.1:5500/sign-up/signed-in.html"
+            window.location.href="signed-in.html"
             alert("Password matches")
         } else {
             alert("Password does not match");
-            window.location.href="http://127.0.0.1:5500/Odin-project/sign-up/"
-            // window.location.reload()
+            // window.location.href="http://127.0.0.1:5500/Odin-project/sign-up/"
+            window.location.reload()
         }
     }
 });

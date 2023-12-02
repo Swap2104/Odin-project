@@ -7,16 +7,16 @@ const game = (() => {
     const gameStatus = (winner, draw) => {
         gameOver = true
         if (draw) {
-            window.location = "http://127.0.0.1:5500/Odin-project/Tic-Tac-Toe/draw.html"
+            window.location = "draw.html"
             console.log("Its a draw");
         }
         if (winner !== "") {
             if (winner === "X") {
                 console.log(`${winner} Wins`)
-                window.location = "http://127.0.0.1:5500/Odin-project/Tic-Tac-Toe/x.html"
+                window.location = "x.html"
             } else {
                 console.log(`${winner} Wins`)
-                window.location = "http://127.0.0.1:5500/Odin-project/Tic-Tac-Toe/o.html"
+                window.location = "o.html"
             }
         }
     }
