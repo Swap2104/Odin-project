@@ -14,6 +14,13 @@ nav_home.className="active"
 nav_about.className = ""
 nav_project.className = ''
 
+console.log(nav_home)
+
+nav_home.setAttribute("href", "index.html")
+nav_project.setAttribute("href", "github_pages/project.html")
+nav_about.setAttribute("href", "github_pages/about.html")
+
+
 const head = document.getElementsByClassName('heading')
 const para = document.getElementsByClassName('para')
 const link = document.getElementsByClassName('link')

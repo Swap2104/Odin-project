@@ -10,6 +10,11 @@ nav_home.class
 nav_about.className=""
 nav_project.className='active'
 
+nav_home.setAttribute("href", "../index.html")
+nav_project.setAttribute("href", "project.html")
+nav_about.setAttribute("href", "about.html")
+
+
 
 for (let i = 0; i < data.length; i++) {
     Cards()
