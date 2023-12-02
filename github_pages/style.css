@@ -49,9 +49,7 @@ nav>a:hover {
     width: 100%;
     min-height: 90vh;
     display: grid;
-    grid-template: 1fr / 20% 80%;
     padding: 1.5rem;
-    display: grid;
     grid-template: 1fr/1fr;
     overflow: hidden;
 }
@@ -153,6 +151,44 @@ nav>a:hover {
     grid-template: 35% 45% 20%/ 1fr;
 }
 
+#about-page {
+    background-color: rgb(36, 36, 36);
+    min-height: 90vh;
+    grid-template: 1fr/1fr;
+    display: grid;
+    overflow: hidden;
+}
+
+.content-about {
+    background-color: rgb(27, 27, 27);
+    margin: 1.5rem;
+    border-radius: 10px;
+    display: grid;
+
+}
+
+.content-about>div {
+    overflow: hidden;
+    margin: 2rem;
+    border-radius: 10px;
+    background-color: rgb(36, 36, 36);
+    display: grid;
+    grid-template: 25% 75%/ 1fr;
+}
+
+.about-head,
+.about-para {
+    font-size: var(--fs-head);
+    margin: 0;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.about-para{
+    font-size: var(--fs--small);
+}
+
+
 @media screen and (max-width:800px) {
 
     #recent_projects,
@@ -167,7 +203,8 @@ nav>a:hover {
         --fs--para: 1rem;
         --fs-small: 1.1rem;
     }
-    nav{
-        padding:0 3rem 0 3rem;
+
+    nav {
+        padding: 0 3rem 0 3rem;
     }
 }
