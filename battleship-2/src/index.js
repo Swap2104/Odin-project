@@ -116,7 +116,7 @@ carrier.addEventListener('click', () => {
 // ? When the finish button is clicked the data is stored in the local storage and the game page (game.html) is loaded.
 document.getElementById("finish-button").addEventListener('click', () => {
     localStorage.setItem("data", JSON.stringify(objects))
-    window.location = "http://127.0.0.1:5500/battleship-2/dist/game.html"
+    window.location = "game.html"
 })
 
 let ship_color ='#B5B8BAff'
