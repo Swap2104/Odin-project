@@ -1,4 +1,10 @@
 h1{
-  font-size: 4rem;
   text-align: center;
+}
+
+.div{
+  background-color: gray;
+  color: white;
+  border-radius: 10px;
+  height: 95vh;
 }
