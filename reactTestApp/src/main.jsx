@@ -1,20 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import Hello from './Hello.jsx'
-import Navbar from './Navbar.jsx'
-import Todolist from './components/todo.jsx'
-// import Comp from './newcomp.jsx'
-import ListAnimal from './List.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import Navbar from "./Navbar.jsx";
+import "./index.css";
+import Buttons from "./components/buttons.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
     <Navbar />
-    <Todolist />
-    {/* <ListAnimal/>  */}
-    {/* <Comp /> */}
-    {/* <Hello /> */}
-  </React.StrictMode>,
-)
+    <Buttons text="google" link="www.google.com" />
+    <Buttons text="react" link="https://react.dev" />
+    <Buttons
+      text="Youtube"
+      link="https://www.youtube.com/watch?v=EFkyxzJtiv4&t=2s"
+    />
+  </React.StrictMode>
+);
