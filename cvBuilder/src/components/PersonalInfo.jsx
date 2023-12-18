@@ -2,8 +2,8 @@ import "../styles/PersonalInfo.css";
 
 const PersonalInfo = () => {
   return (
-     <>
-      <h1>Work Experience</h1>
+    <>
+      <h1>Personal Information</h1>
       <form action="" className="PersonalInfo">
         <label htmlFor="firstName">First Name</label>
         <label htmlFor="lastName">Last Name</label>
