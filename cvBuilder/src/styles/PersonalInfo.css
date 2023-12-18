@@ -1,0 +1,12 @@
+.PersonalInfo{
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+    padding: 2rem;
+}
+
+input{
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+}
