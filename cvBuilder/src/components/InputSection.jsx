@@ -8,7 +8,7 @@ import { useState } from "react";
 const InputSection = () => {
   const form = [<PersonalInfo />, <EducationDetails />, <Experience />];
   const [Index, setIndex] = useState(0);
-  console.log(Index)
+  console.log("Index: "+Index);
   return (
     <div className="InputSection">
       <div className="formContainer">
@@ -16,18 +16,12 @@ const InputSection = () => {
         {/* Increment/decrement a value using the back and next */}
         {/* Based on the value change the component */}
 
-        {/* <PersonalInfo /> */}
-        {/* <EducationDetails /> */}
-        {/* <Experience /> */}
-
         {form[Index]}
       </div>
       <div>
-        {/* This div contains the buttons. Pass the clickFunction */}
         <Buttons
           clickFunction={() => {
-            // setIndex(Index < 3 && Index >=0 ? Index - 1 : null);
-            setIndex(Index - 1);
+            setIndex(Index < 3 && Index > 0 ? Index - 1 : Index);
             console.log(Index);
           }}
           text={"Back"}
@@ -35,8 +29,7 @@ const InputSection = () => {
 
         <Buttons
           clickFunction={() => {
-            setIndex(Index + 1);
-            // setIndex(Index < 3 && Index >=0 ? Index - 1 : null);
+            setIndex(Index < 2 && Index >= 0 ? Index + 1 : Index);
             console.log(Index);
           }}
           text={"Next"}
