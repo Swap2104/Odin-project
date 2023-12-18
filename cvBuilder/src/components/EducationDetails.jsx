@@ -5,11 +5,11 @@ const EducationDetails = () => {
     <>
       <h1>Education Details</h1>
       <form action="" className="PersonalInfo">
-        <label htmlFor="firstName">Collage</label>
-        <label htmlFor="lastName">Degree</label>
+        <label htmlFor="Institute">Institute</label>
+        <label htmlFor="Degree">Degree</label>
 
-        <input type="text" name="firstName" placeholder="Collage" />
-        <input type="text" name="lastName" placeholder="Degree" />
+        <input type="text" name="Institute" placeholder="Institute" />
+        <input type="text" name="Degree" placeholder="Degree" />
 
         <label htmlFor="phone">Start Date</label>
         <label htmlFor="email">End Date</label>
