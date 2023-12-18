@@ -2,6 +2,7 @@ import Buttons from "./Buttons";
 import "../styles/InputSection.css";
 import PersonalInfo from "./PersonalInfo";
 import EducationDetails from "./EducationDetails";
+import Experience from "./Experience";
 import { useState } from "react";
 
 const InputSection = () => {
@@ -16,7 +17,8 @@ const InputSection = () => {
 
         {/* <PersonalInfo /> */}
         {/* <EducationDetails /> */}
-        {form[Index]}
+        <Experience />
+        {/* {form[Index]} */}
       </div>
       <div>
         {/* This div contains the buttons. Pass the clickFunction */}
