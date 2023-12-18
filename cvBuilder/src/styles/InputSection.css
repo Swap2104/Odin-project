@@ -8,3 +8,13 @@ div:last-child{
     display: grid;
     grid-template: 1fr/ 1fr 1fr;
 }
+
+.formContainer{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template: .1fr / 1fr;
+}
+
+.formContainer>h1{
+    padding: 1rem;
+}
