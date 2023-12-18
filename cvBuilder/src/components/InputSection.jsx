@@ -6,9 +6,14 @@ import Experience from "./Experience";
 import { useState } from "react";
 
 const InputSection = () => {
+  //? form array store the components
   const form = [<PersonalInfo />, <EducationDetails />, <Experience />];
+
+  // ? the index of the component to load
   const [Index, setIndex] = useState(0);
-  console.log("Index: "+Index);
+
+  //! console.log("Index: " + Index);
+
   return (
     <div className="InputSection">
       <div className="formContainer">
@@ -19,10 +24,12 @@ const InputSection = () => {
         {form[Index]}
       </div>
       <div>
+        {/* The index is begin updated when the buttons are clicked */}
+        {/* Based on the Value of the index components are loaded */}
         <Buttons
           clickFunction={() => {
             setIndex(Index < 3 && Index > 0 ? Index - 1 : Index);
-            console.log(Index);
+            // console.log(Index);
           }}
           text={"Back"}
         />
@@ -30,7 +37,7 @@ const InputSection = () => {
         <Buttons
           clickFunction={() => {
             setIndex(Index < 2 && Index >= 0 ? Index + 1 : Index);
-            console.log(Index);
+            // console.log(Index);
           }}
           text={"Next"}
         />
