@@ -1,4 +1,4 @@
-import './App.css'
+import '../src/styles/App.css'
 import PreviewSection from "./components/Preview.jsx";
 import InputSection from './components/InputSection.jsx';
 
