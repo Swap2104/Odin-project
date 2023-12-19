@@ -19,7 +19,8 @@ textarea {
 }
 
 #educationFormContainer {
-    overflow: auto;
+    max-height: 50rem;
+    overflow-y: auto;
     display: grid;
     grid-template: .1fr .1fr / 1fr;
 }
