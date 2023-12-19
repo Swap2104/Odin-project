@@ -17,14 +17,12 @@ const InputSection = () => {
 
   return (
     <div className="InputSection">
-      <div className="formContainer">
-        {/* Create three components for the three section */}
-        {/* Increment/decrement a value using the back and next */}
-        {/* Based on the value change the component */}
+      {/* Create three components for the three section */}
+      {/* Increment/decrement a value using the back and next */}
+      {/* Based on the value change the component */}
 
-        {form[Index]}
-      </div>
-      <div>
+      {form[Index]}
+      <div className="btnContainer">
         {/* The index is begin updated when the buttons are clicked */}
         {/* Based on the Value of the index components are loaded */}
         <Buttons

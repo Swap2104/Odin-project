@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/PersonalInfo.css";
+import "../styles/EducationDetails.css";
 import Buttons from "./Buttons";
 
 const EducationDetails = () => {
@@ -7,21 +7,19 @@ const EducationDetails = () => {
 
   function form() {
     return (
-      <>
-        <form action="" className="PersonalInfo">
-          <label htmlFor="Institute">Institute</label>
-          <label htmlFor="Degree">Degree</label>
+      <form action="" className="educationDetails">
+        <label htmlFor="Institute">Institute</label>
+        <label htmlFor="Degree">Degree</label>
 
-          <input type="text" name="Institute" placeholder="Institute" />
-          <input type="text" name="Degree" placeholder="Degree" />
+        <input type="text" name="Institute" placeholder="Institute" />
+        <input type="text" name="Degree" placeholder="Degree" />
 
-          <label htmlFor="phone">Start Date</label>
-          <label htmlFor="email">End Date</label>
+        <label htmlFor="phone">Start Date</label>
+        <label htmlFor="email">End Date</label>
 
-          <input type="text" name="phone" placeholder="Start Date" />
-          <input type="text" name="email" placeholder="End Date" />
-        </form>
-      </>
+        <input type="text" name="phone" placeholder="Start Date" />
+        <input type="text" name="email" placeholder="End Date" />
+      </form>
     );
   }
 
@@ -30,15 +28,14 @@ const EducationDetails = () => {
   }
 
   return (
-    <>
-      <h1>Education Details</h1>
-      <Buttons clickFunction={() => addForm()} text={"Add Education"} />
+      <div id="educationFormContainer">
+        <h1>Education Details</h1>
+        <Buttons clickFunction={() => addForm()} text={"Add Education"} />
 
-      {displayForm.map((form, index) => (
-        <div key={index}>{form}</div>
-      ))}
-    </>
+        {displayForm.map((form, index) => (
+          <div key={index}>{form}</div>
+        ))}
+      </div>
   );
 };
-
 export default EducationDetails;

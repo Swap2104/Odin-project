@@ -2,7 +2,7 @@ import "../styles/PersonalInfo.css";
 
 const PersonalInfo = () => {
   return (
-    <>
+    <div className="infoFormContainer">
       <h1>Personal Information</h1>
       <form action="" className="PersonalInfo">
         <label htmlFor="firstName">First Name</label>
@@ -30,7 +30,7 @@ const PersonalInfo = () => {
         <label htmlFor="profile">Profile</label>
         <textarea name="profile" id="profile" cols="30" rows="10"></textarea>
       </form>
-    </>
+    </div>
   );
 };
 
