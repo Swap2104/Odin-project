@@ -28,7 +28,7 @@ const EducationDetails = () => {
   }
 
   return (
-      <div id="educationFormContainer">
+      <div className="educationFormContainer">
         <h1>Education Details</h1>
         <Buttons clickFunction={() => addForm()} text={"Add Education"} />
 

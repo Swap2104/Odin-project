@@ -1,4 +1,4 @@
-.educationDetails {
+.experienceForm {
     display: grid;
     grid-template: .01fr/ 1fr 1fr;
     grid-auto-flow: row;
@@ -18,13 +18,13 @@ textarea {
     border: none;
 }
 
-.experienceFormContainer {
+.educationFormContainer {
     max-height: 50rem;
     overflow-y: auto;
     display: grid;
     grid-template: .1fr .1fr / 1fr;
 }
 
-.experienceFormContainer>h1 {
+.educationFormContainer>h1 {
     padding: 1rem;
 }
