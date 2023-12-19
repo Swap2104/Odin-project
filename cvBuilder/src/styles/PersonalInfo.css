@@ -20,12 +20,12 @@ textarea {
     grid-column: span 2;
 }
 
-.formContainer {
+.infoFormContainer {
     /* border: 1px solid red; */
     display: grid;
     grid-template: .1fr / 1fr;
 }
 
-.formContainer>h1 {
+.infoFormContainer>h1 {
     padding: 1rem;
 }
