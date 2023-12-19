@@ -3,8 +3,7 @@ import "../styles/PersonalInfo.css";
 import Buttons from "./Buttons";
 
 const EducationDetails = () => {
-
-  const[displayForm, setVal]=useState(false)
+  const [displayForm, setVal] = useState([form()]);
 
   function form() {
     return (
@@ -26,12 +25,18 @@ const EducationDetails = () => {
     );
   }
 
+  function addForm() {
+    setVal((prevForms) => [...prevForms, form()]);
+  }
 
   return (
     <>
       <h1>Education Details</h1>
-      <Buttons clickFunction={()=>setVal(true)} text={'Add Education'}/>
-      {displayForm?form():null}
+      <Buttons clickFunction={() => addForm()} text={"Add Education"} />
+
+      {displayForm.map((form, index) => (
+        <div key={index}>{form}</div>
+      ))}
     </>
   );
 };

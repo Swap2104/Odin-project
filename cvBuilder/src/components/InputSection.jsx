@@ -6,10 +6,11 @@ import Experience from "./Experience";
 import { useState } from "react";
 
 const InputSection = () => {
-  //? form array store the components
-  const form = [<PersonalInfo />, <EducationDetails />, <Experience />];
+  //? form array store the components;
+  //! Temporarily changing the order -> final order =  <PersonalInfo />, [<EducationDetails />, <Experience />];
+  const form = [<EducationDetails />, <PersonalInfo />, <Experience />];
 
-  // ? the index of the component to load
+  // ? the index of the component to load;
   const [Index, setIndex] = useState(0);
 
   //! console.log("Index: " + Index);
