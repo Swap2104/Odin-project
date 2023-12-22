@@ -6,8 +6,7 @@ const PreviewSection = () => {
   return (
     <div className="preview">
       <SidePenal />
-      <PreviewMain /> 
-      {/* <h1>This is the preview section</h1> */}
+      <PreviewMain />
     </div>
   );
 };
