@@ -4,6 +4,9 @@
     grid-template: 1fr 1fr /1fr;
 }
 #previewMain>div{
+    display: grid;
+    grid-template: .2fr 1fr /1fr;
+
     margin: 1rem;
     border: 1px solid white;
 }
