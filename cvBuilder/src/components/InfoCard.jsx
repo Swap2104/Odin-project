@@ -24,13 +24,13 @@ const InfoCard = (props) => {
     return (
       //? take contact into in props and display each item in a lost item tag
       // ? also add icons if possible
-      <div className="infoCard contact">
+      <div className="infoCard">
         <h2>Other Information</h2>
-        <ul>
-          <h3>{" " + props.email}</h3>
-          <h3>{" " + props.phone}</h3>
-          <h3>{" " + props.location}</h3>
-        </ul>
+        {/* <ul> */}
+          <p>{" " + props.email}</p>
+          <p>{" " + props.phone}</p>
+          <p>{" " + props.location}</p>
+        {/* </ul> */}
       </div>
     );
   }

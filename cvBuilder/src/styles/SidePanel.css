@@ -1,6 +1,6 @@
 #sidePanel {
     display: grid;
-    grid-template: .2fr 1fr 1fr/ 1fr;
+    grid-template: .4fr 1fr .5fr/ 1fr;
     padding: 1rem;
 }
 
@@ -18,10 +18,19 @@
 }
 
 #sidePanel>div:last-child {
-    grid-template: 1fr 6fr/ 1fr;
+    grid-template: 2fr 1fr 1fr 1fr/ 1fr;
     padding: 2rem;
+}
+
+#sidePanel>div:last-child>p {
+    font-size: 1.2rem;
 }
 
 #sidePanel>div:first-child {
     margin-top: 0;
+    align-items: center;
+}
+
+#sidePanel>div:nth-child(2) {
+    grid-template: .2fr 1fr/ 1fr;
 }
