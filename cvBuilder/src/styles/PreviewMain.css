@@ -1,12 +1,21 @@
-#previewMain{
-    /* border: 1px solid white; */
+/*? preview Main body style */
+#previewMain {
     display: grid;
     grid-template: 1fr 1fr /1fr;
+    padding: 1rem;
+    gap: 1rem;
+    padding-left: 0;
 }
-#previewMain>div{
+
+/* ? Style of the education and experience divs */
+#previewMain>div {
     display: grid;
     grid-template: .2fr 1fr /1fr;
 
-    margin: 1rem;
-    border: 1px solid white;
+    margin-left: 0;
+    padding: 1rem;
+
+    background-color: #242424;
+    border-radius: 10px;
+    /* border: 1px solid white; */
 }
