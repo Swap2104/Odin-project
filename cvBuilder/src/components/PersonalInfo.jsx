@@ -1,5 +1,6 @@
 import "../styles/PersonalInfo.css";
 
+// ? personal information form
 const PersonalInfo = () => {
   return (
     <div className="infoFormContainer">

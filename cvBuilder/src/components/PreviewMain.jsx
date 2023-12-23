@@ -1,9 +1,7 @@
 const PreviewMain = () => {
-    return ( 
-        <div id="previewMain">
-            
-        </div>
-     );
-}
- 
+  // ? the main part of the preview sections
+  // ? contains the work and education section
+  return <div id="previewMain"></div>;
+};
+
 export default PreviewMain;

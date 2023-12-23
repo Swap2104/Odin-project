@@ -14,9 +14,20 @@
 
     background-color: #242424;
     border-radius: 10px;
-    /* border: 1px solid red; */
 }
 
+/* ? styles the first card  */
+#sidePanel>div:first-child {
+    margin-top: 0;
+    align-items: center;
+}
+
+/* ? styles the Second card  */
+#sidePanel>div:nth-child(2) {
+    grid-template: .2fr 1fr/ 1fr;
+}
+
+/* ? styles the last card  */
 #sidePanel>div:last-child {
     grid-template: 2fr 1fr 1fr 1fr/ 1fr;
     padding: 2rem;
@@ -24,13 +35,4 @@
 
 #sidePanel>div:last-child>p {
     font-size: 1.2rem;
-}
-
-#sidePanel>div:first-child {
-    margin-top: 0;
-    align-items: center;
-}
-
-#sidePanel>div:nth-child(2) {
-    grid-template: .2fr 1fr/ 1fr;
 }
