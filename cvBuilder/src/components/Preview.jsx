@@ -6,7 +6,7 @@ import PreviewMain from "./PreviewMain";
 const PreviewSection = () => {
   return (
     <div className="preview">
-      <SidePenal /> 
+      <SidePenal />
       <PreviewMain />
     </div>
   );
