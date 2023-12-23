@@ -1,0 +1,9 @@
+#previewMain{
+    /* border: 1px solid white; */
+    display: grid;
+    grid-template: 1fr 1fr /1fr;
+}
+#previewMain>div{
+    margin: 1rem;
+    border: 1px solid white;
+}
