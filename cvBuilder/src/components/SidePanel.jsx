@@ -1,10 +1,9 @@
 import InfoCard from "./InfoCard";
-import "../styles/SidePanel.css"
+import "../styles/SidePanel.css";
 
 const SidePenal = () => {
   return (
     <div id="sidePanel">
-
       <InfoCard
         options={"name"}
         name={"Swapnil Naik"}
@@ -18,6 +17,12 @@ const SidePenal = () => {
         }
       />
 
+      <InfoCard
+        options={"contact"}
+        email={"test@gmail.com"}
+        phone={"1234567890"}
+        location={"London"}
+      />
     </div>
   );
 };

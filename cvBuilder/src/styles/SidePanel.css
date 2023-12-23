@@ -1,6 +1,7 @@
 #sidePanel {
     display: grid;
     grid-template: .2fr 1fr 1fr/ 1fr;
+    padding: 1rem;
 }
 
 #sidePanel>div {
@@ -8,11 +9,19 @@
     justify-content: center;
     text-align: justify;
 
-    margin: 2rem;
-    margin-bottom: 0;
+    margin-top: 1rem;
     padding: 1rem;
 
     background-color: #242424;
     border-radius: 10px;
     /* border: 1px solid red; */
+}
+
+#sidePanel>div:last-child {
+    grid-template: 1fr 6fr/ 1fr;
+    padding: 2rem;
+}
+
+#sidePanel>div:first-child {
+    margin-top: 0;
 }
