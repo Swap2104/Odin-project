@@ -7,7 +7,7 @@
     padding: 1rem;
     /* border: 1px solid #ffffff; */
     border-radius: 5px;
-    background-color: rgba(82, 81, 81, 0.384);
+    background-color: #4A4A4A;
 }
 
 input,
@@ -19,7 +19,7 @@ textarea {
 }
 
 .educationFormContainer {
-    max-height: 50rem;
+    max-height: 58rem;
     overflow-y: auto;
     display: grid;
     grid-template: .1fr .1fr / 1fr;
