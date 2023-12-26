@@ -1,44 +1,32 @@
 import { useState } from "react";
 import "../styles/Experience.css";
 import Buttons from "./Buttons";
+// ! The form component
+import ExperienceForm from "./ExperienceForm";
 
-// ? displayForm array stores forms to load
 const Experience = () => {
-  const [displayForm, setVal] = useState([form()]);
+  // ? displayForm array stores forms to load
+  const [displayForm, setVal] = useState([]);
 
-  // ? Function to construct form
-  function form() {
-    return (
-      <form action="" className="experienceForm">
-        <label htmlFor="position">Job Position</label>
-        <label htmlFor="coName">Company Name</label>
-
-        <input type="text" name="position" placeholder="Job Position" />
-        <input type="text" name="coName" placeholder="Company Name" />
-
-        <label htmlFor="location">Location</label>
-        <label htmlFor="coEmail">Company Email</label>
-
-        <input type="text" name="location" placeholder="Location" />
-        <input type="text" name="coEmail" placeholder="Company Email" />
-      </form>
-    );
+  // ? This function is used to display the components in displayForm array
+  function loadForm() {
+    return displayForm.map((form, index) => <div key={index}>{form}</div>);
   }
 
   // ? To load a new form it is added to the displayForm array using addForm() function
   function addForm() {
-    setVal((prevForms) => [...prevForms, form()]);
+    setVal((prevForms) => [...prevForms, <ExperienceForm />]);
+    console.log(displayForm);
   }
 
   return (
     <div className="experienceFormContainer">
       <h1>Work Experience</h1>
+      {/* When the button is clicked a new form is add in the display form array */}
       <Buttons clickFunction={() => addForm()} text={"Add Work Experience"} />
 
       {/* loads all the forms from the displayFrom array */}
-      {displayForm.map((form, index) => (
-        <div key={index}>{form}</div>
-      ))}
+      {loadForm()}
     </div>
   );
 };

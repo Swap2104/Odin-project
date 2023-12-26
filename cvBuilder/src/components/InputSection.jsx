@@ -6,11 +6,11 @@ import Experience from "./Experience";
 import { useState } from "react";
 
 const InputSection = (props) => {
-  console.log(props);
+  // console.log(props);
 
   //? form array store the components;
   //! Temporarily changing the order -> final order =  <PersonalInfo />, [<EducationDetails />, <Experience />];
-  const form = [<PersonalInfo props={props}/>, <EducationDetails />,  <Experience />];
+  const form = [<Experience />, <PersonalInfo props={props}/>, <EducationDetails />,];
 
   // ? the index of the component to load;
   const [Index, setIndex] = useState(0);

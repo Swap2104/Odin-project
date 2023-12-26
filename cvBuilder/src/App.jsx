@@ -11,7 +11,7 @@ function App() {
   const [location, setLocation] = useState("London");
   const [email, setEmail] = useState("TohrLore@gmail.com");
   const [phone, setPhone] = useState("1234567890");
-  const [profile, setProfile] = useState("This is a test profile");
+  const [profile, setProfile] = useState("This is a test profile  ");
 
   return (
     <div className="app">

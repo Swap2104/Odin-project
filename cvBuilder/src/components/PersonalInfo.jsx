@@ -3,15 +3,6 @@ import "../styles/PersonalInfo.css";
 
 // ? personal information form
 const PersonalInfo = (props) => {
-  console.log(props);
-  // console.log(props.props.personalInfo);
-
-  // const [firstName, setFirstName] = useState("Thor");
-  // const [lastName, setLastName] = useState("Lore");
-  // const [currentPosition, setCurrentPosition] = useState("Programmer");
-  // const [location, setLocation] = useState("London");
-  // const [email, setEmail] = useState("TohrLore@gmail.com");
-  // const [phone, setPhone] = useState("1234567890");
 
   return (
     <div className="infoFormContainer">

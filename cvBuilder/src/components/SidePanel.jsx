@@ -2,7 +2,7 @@ import InfoCard from "./InfoCard";
 import "../styles/SidePanel.css";
 
 const SidePenal = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div id="sidePanel">
       {/*  declaring info cards */}
