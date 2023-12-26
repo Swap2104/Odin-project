@@ -5,13 +5,15 @@ import { useState } from "react";
 
 
 function App() {
-  const [firstName, setFirstName] = useState("Thor")
+  const [firstName, setFirstName] = useState("Thor");
   const [lastName, setLastName] = useState("Lore");
   const [currentPosition, setCurrentPosition] = useState("Programmer");
   const [location, setLocation] = useState("London");
   const [email, setEmail] = useState("TohrLore@gmail.com");
   const [phone, setPhone] = useState("1234567890");
   const [profile, setProfile] = useState("This is a test profile  ");
+  //? exp
+  const [displayForm, setVal] = useState([]);
 
   return (
     <div className="app">
@@ -23,7 +25,7 @@ function App() {
           location,
           email,
           phone,
-          profile
+          profile,
         }}
         personalInfoSet={{
           setFirstName,
@@ -32,9 +34,11 @@ function App() {
           setLocation,
           setEmail,
           setPhone,
-          setProfile
+          setProfile,
         }}
+        Experience={{ displayForm, setVal }}
       />
+
       <PreviewSection
         personalInfo={{
           firstName,
@@ -43,8 +47,9 @@ function App() {
           location,
           email,
           phone,
-          profile
+          profile,
         }}
+        Experience={{ displayForm}}
       />
     </div>
   );

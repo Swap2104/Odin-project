@@ -4,19 +4,22 @@ import Buttons from "./Buttons";
 // ! The form component
 import ExperienceForm from "./ExperienceForm";
 
-const Experience = () => {
+const Experience = (props) => {
   // ? displayForm array stores forms to load
+  // console.log(props.array.)
   const [displayForm, setVal] = useState([]);
 
   // ? This function is used to display the components in displayForm array
   function loadForm() {
-    return displayForm.map((form, index) => <div key={index}>{form}</div>);
+    return props.array.displayForm.map((form, index) => (
+      <div key={index}>{form}</div>
+    ));
   }
 
   // ? To load a new form it is added to the displayForm array using addForm() function
   function addForm() {
-    setVal((prevForms) => [...prevForms, <ExperienceForm />]);
-    console.log(displayForm);
+    props.array.setVal((prevForms) => [...prevForms, <ExperienceForm />]);
+    console.log(props.array.displayForm);
   }
 
   return (
