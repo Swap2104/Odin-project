@@ -56,7 +56,6 @@ const PersonalInfo = (props) => {
         <input
           type="text"
           name="location"
-          placeholder="Location"
           value={props.props.personalInfo.location}
           onChange={(e) =>
             props.props.personalInfoSet.setLocation(e.target.value)
@@ -83,7 +82,16 @@ const PersonalInfo = (props) => {
         />
 
         <label htmlFor="profile">Profile</label>
-        <textarea name="profile" id="profile" cols="30" rows="10"></textarea>
+        <textarea
+          name="profile"
+          id="profile"
+          cols="30"
+          rows="10"
+          value={props.props.personalInfo.profile}
+          onChange={(e) =>
+            props.props.personalInfoSet.setProfile(e.target.value)
+          }
+        ></textarea>
       </form>
     </div>
   );

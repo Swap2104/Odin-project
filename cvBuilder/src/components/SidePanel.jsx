@@ -18,16 +18,14 @@ const SidePenal = (props) => {
 
       <InfoCard
         options={"profile"}
-        profile={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in malesuada lorem. Morbi sodales, dui in dapibus gravida, massa sem pretium orci, vitae volutpat tortor urna lobortis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque eu quam eros"
-        }
+        profile={props.props.personalInfo.profile}
       />
 
       <InfoCard
         options={"info"}
-        email={"test@gmail.com"}
-        phone={"1234567890"}
-        location={"London"}
+        email={props.props.personalInfo.email}
+        phone={props.props.personalInfo.phone}
+        location={props.props.personalInfo.location}
       />
     </div>
   );

@@ -11,6 +11,7 @@ function App() {
   const [location, setLocation] = useState("London");
   const [email, setEmail] = useState("TohrLore@gmail.com");
   const [phone, setPhone] = useState("1234567890");
+  const [profile, setProfile] = useState("This is a test profile");
 
   return (
     <div className="app">
@@ -22,6 +23,7 @@ function App() {
           location,
           email,
           phone,
+          profile
         }}
         personalInfoSet={{
           setFirstName,
@@ -30,6 +32,7 @@ function App() {
           setLocation,
           setEmail,
           setPhone,
+          setProfile
         }}
       />
       <PreviewSection
@@ -40,6 +43,7 @@ function App() {
           location,
           email,
           phone,
+          profile
         }}
       />
     </div>
