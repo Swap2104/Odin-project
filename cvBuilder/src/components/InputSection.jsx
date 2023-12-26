@@ -5,10 +5,12 @@ import EducationDetails from "./EducationDetails";
 import Experience from "./Experience";
 import { useState } from "react";
 
-const InputSection = () => {
+const InputSection = (props) => {
+  console.log(props);
+
   //? form array store the components;
   //! Temporarily changing the order -> final order =  <PersonalInfo />, [<EducationDetails />, <Experience />];
-  const form = [<EducationDetails />, <PersonalInfo />, <Experience />];
+  const form = [<PersonalInfo props={props}/>, <EducationDetails />,  <Experience />];
 
   // ? the index of the component to load;
   const [Index, setIndex] = useState(0);

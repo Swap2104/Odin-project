@@ -1,14 +1,19 @@
 import InfoCard from "./InfoCard";
 import "../styles/SidePanel.css";
 
-const SidePenal = () => {
+const SidePenal = (props) => {
+  console.log(props)
   return (
     <div id="sidePanel">
       {/*  declaring info cards */}
       <InfoCard
         options={"name"}
-        name={"Swapnil Naik"}
-        position={"Rust developer"}
+        name={
+          props.props.personalInfo.firstName +
+          " " +
+          props.props.personalInfo.lastName
+        }
+        position={props.props.personalInfo.currentPosition}
       />
 
       <InfoCard

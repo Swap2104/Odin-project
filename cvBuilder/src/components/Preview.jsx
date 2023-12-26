@@ -3,10 +3,11 @@ import SidePenal from "./SidePanel";
 import PreviewMain from "./PreviewMain";
 
 //? Preview section component
-const PreviewSection = () => {
+const PreviewSection = (props) => {
+  //!  the props parameter name can be changed to something else
   return (
     <div className="preview">
-      <SidePenal />
+      <SidePenal props={props} />
       <PreviewMain />
     </div>
   );

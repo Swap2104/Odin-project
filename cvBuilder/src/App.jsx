@@ -1,15 +1,49 @@
-import '../src/styles/App.css'
+import "../src/styles/App.css";
 import PreviewSection from "./components/Preview.jsx";
-import InputSection from './components/InputSection.jsx';
+import InputSection from "./components/InputSection.jsx";
+import { useState } from "react";
 
 
 function App() {
+  const [firstName, setFirstName] = useState("Thor")
+  const [lastName, setLastName] = useState("Lore");
+  const [currentPosition, setCurrentPosition] = useState("Programmer");
+  const [location, setLocation] = useState("London");
+  const [email, setEmail] = useState("TohrLore@gmail.com");
+  const [phone, setPhone] = useState("1234567890");
+
   return (
     <div className="app">
-      <InputSection />
-      <PreviewSection />
+      <InputSection
+        personalInfo={{
+          firstName,
+          lastName,
+          currentPosition,
+          location,
+          email,
+          phone,
+        }}
+        personalInfoSet={{
+          setFirstName,
+          setLastName,
+          setCurrentPosition,
+          setLocation,
+          setEmail,
+          setPhone,
+        }}
+      />
+      <PreviewSection
+        personalInfo={{
+          firstName,
+          lastName,
+          currentPosition,
+          location,
+          email,
+          phone,
+        }}
+      />
     </div>
   );
 }
 
-export default App
+export default App;
