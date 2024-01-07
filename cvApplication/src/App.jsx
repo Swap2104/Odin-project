@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import './styles/App.css'
+import PreviewSection from './components/Preview'
+import InputSection from './components/InputSection'
+
 
 function App() {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <div className='app'>
+      <InputSection/>
+      <PreviewSection/>
+    </div>
   )
 }
 

@@ -1,0 +1,11 @@
+.InputSection{
+    display: grid;
+    grid-template: 4fr .5fr/1fr;
+    width: 100%;
+}
+
+.btnContainer{
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+}
+
