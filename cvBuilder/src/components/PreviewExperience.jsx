@@ -2,7 +2,7 @@ import PreviewCard from "./PreviewCard";
 
 const PreviewExperience = (props) => {
   // ? Work experience section in the Preview
-  console.log(props.array.length);
+  // console.log(props.array.length);
 
   // ? This function is used to display the components in displayForm array
   function loadForm() {
@@ -11,6 +11,7 @@ const PreviewExperience = (props) => {
         institute={"GPC"}
         degree={"Computer Engineering"}
         StartEnd={"2021-2024"}
+        key={index}
       />
     ));
   }

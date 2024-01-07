@@ -10,7 +10,7 @@ const InputSection = (props) => {
 
   //? form array store the components;
   //! Temporarily changing the order -> final order =  <PersonalInfo />, [<EducationDetails />, <Experience />];
-  const form = [<Experience array={props.Experience}/>, <PersonalInfo props={props}/>, <EducationDetails />,];
+  const form = [<Experience props={props.Experience}/>, <PersonalInfo props={props}/>, <EducationDetails />,];
 
   // ? the index of the component to load;
   const [Index, setIndex] = useState(0);
