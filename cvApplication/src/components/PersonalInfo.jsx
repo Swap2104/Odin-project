@@ -1,4 +1,4 @@
-import "../styles/PersonalInfo.css";
+import "../styles/FormStyle.css";
 
 // ? personal information form
 const PersonalInfo = (props) => {

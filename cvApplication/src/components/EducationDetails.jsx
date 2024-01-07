@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "../styles/EducationDetails.css";
+import "../styles/FormStyle.css";
 import Buttons from "./Buttons";
 
-// ? displayForm array stores forms to load
 const EducationDetails = () => {
   // ? Function to construct form
   function form() {
@@ -14,11 +13,11 @@ const EducationDetails = () => {
         <input type="text" name="Institute" placeholder="Institute" />
         <input type="text" name="Degree" placeholder="Degree" />
 
-        <label htmlFor="phone">Start Date</label>
-        <label htmlFor="email">End Date</label>
+        <label htmlFor="StartDate">Start Date</label>
+        <label htmlFor="EndDate">End Date</label>
 
-        <input type="text" name="phone" placeholder="Start Date" />
-        <input type="text" name="email" placeholder="End Date" />
+        <input type="date" name="StartDate" placeholder="Start Date" />
+        <input type="date" name="EndDate" placeholder="End Date" />
       </form>
     );
   }
@@ -26,6 +25,7 @@ const EducationDetails = () => {
   return (
     <div className="educationFormContainer">
       <h1>Education Details</h1>
+      {form()}
       {form()}
       {form()}
     </div>
